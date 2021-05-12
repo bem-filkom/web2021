@@ -9,7 +9,7 @@ const Navbar = () => {
   return (
     <div
       className={`flex flex-row px-4 ${
-        home ? "fixed" : "sticky"
+        home ? "fixed" : "sticky bg-purple"
       } w-full top-0 font-aeonik text-white  z-10`}
     >
       <NavLogo />

@@ -2,6 +2,7 @@ import React from "react";
 import { Switch, BrowserRouter as Router, Route } from "react-router-dom";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar/Navbar";
+import About from "./pages/About";
 import Home from "./pages/Home";
 
 const App = () => {
@@ -9,7 +10,8 @@ const App = () => {
     <Router>
       <Navbar />
       <Switch>
-        <Route path="/" component={Home} />
+        <Route path="/" component={Home} exact />
+        <Route path="/tentang" component={About} exact />
       </Switch>
       <Footer/>
     </Router>

@@ -100,13 +100,22 @@ const Home = () => {
             has been the industry's standard dummy text ever"
           />
         </div>
+        <div className='flex mt-12'>
+          <a className="px-8 py-2 text-lg font-marcellus rounded-full font-semibold bg-yellow-light border-2 border-black mx-auto">
+            Read More
+          </a>
+        </div>
       </div>
       <div className="bg-yellow py-12">
         <h2 className="text-white text-center font-marcellus text-4xl font-semibold">
           PARTNERSHIP
         </h2>
-        <div className='mt-8'>
-          <img src="https://dummyimage.com/vga" alt="Article" className='w-80 mx-auto'/>
+        <div className="mt-8">
+          <img
+            src="https://dummyimage.com/vga"
+            alt="Article"
+            className="w-80 mx-auto"
+          />
         </div>
       </div>
     </div>

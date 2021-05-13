@@ -23,14 +23,14 @@ const Home = () => {
       </div>
       <div id="articles">
         <div className="px-24 py-20 bg-purple flex flex-row gap-8">
-          <div className="flex-shrink-0">
+          <div className="flex-none">
             <img
               src="https://paulsexcavations.com.au/wp-content/uploads/2017/11/dummy-image-1-300x298.jpg"
               className="w-80"
               alt="Presiden BEM"
             />
           </div>
-          <div className="text-white font-aeonik text-lg">
+          <div className="text-white font-aeonik text-lg flex-auto">
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry's standard dummy text
             ever since the 1500s, when an unknown printer took a galley of type
@@ -45,7 +45,7 @@ const Home = () => {
           </div>
         </div>
         <div className="px-24 py-20 bg-purple flex flex-row gap-8">
-          <div className="text-white font-aeonik text-lg">
+          <div className="text-white font-aeonik text-lg flex-auto">
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry's standard dummy text
             ever since the 1500s, when an unknown printer took a galley of type
@@ -58,7 +58,7 @@ const Home = () => {
             has been the industry's standard dummy text ever since the 1500s,
             when an unknown printer took a galley of type and
           </div>
-          <div className="flex-shrink-0">
+          <div className="flex-none">
             <img
               src="https://paulsexcavations.com.au/wp-content/uploads/2017/11/dummy-image-1-300x298.jpg"
               className="w-80"

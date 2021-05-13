@@ -4,6 +4,7 @@ import Profile from "../components/Profile";
 import Program from "../components/Program";
 import Underline from "../components/Underline";
 import { motion } from "framer-motion";
+import Ribbon from "../components/Ribbon/Ribbon";
 
 const Cabinet = () => {
   return (
@@ -14,6 +15,10 @@ const Cabinet = () => {
       exit={{ opacity: 0 }}
       transition={{ duration: 0.3 }}
     >
+      <Ribbon
+        primaryTitle="KEBIROAN"
+        secondaryTitle="PENGEMBANGAN INFORMASI &amp; TEKNOLOGI"
+      />
       <div className="max-w-5xl mx-auto pt-8">
         <div>
           <img

@@ -1,0 +1,42 @@
+.ribbon-wrapper::after,
+.ribbon-wrapper::before {
+  content: "";
+  position: absolute;
+  bottom: -3.5rem;
+  border: 60px solid #562949;
+  z-index: -2;
+}
+
+.ribbon-wrapper::before {
+  left: -4rem;
+  border-left-color: transparent !important;
+}
+
+.ribbon-wrapper::after {
+  right: -4rem;
+  border-right-color: transparent !important;
+}
+
+.ribbon{
+    background-color: #673258;
+}
+
+.ribbon::after,
+.ribbon::before {
+  content: "";
+  position: absolute;
+  border-style: solid;
+  border-color: #45213b transparent transparent transparent;
+  bottom: -3.5rem;
+  z-index: -1;
+}
+
+.ribbon::after {
+  right: 0;
+  border-width: 3.5rem 3.5rem 0rem 0rem;
+}
+
+.ribbon::before {
+  left: 0;
+  border-width: 3.5rem 0rem 0rem 3.5rem;
+}

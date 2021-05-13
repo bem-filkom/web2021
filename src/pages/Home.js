@@ -1,6 +1,7 @@
 import React from "react";
 import ArticleCard from "../components/ArticleCard";
 import { motion } from "framer-motion";
+import { scroller } from "react-scroll";
 
 const Home = () => {
   const svgVariants = {
@@ -47,7 +48,17 @@ const Home = () => {
           <h1 className="text-5xl">BEM FILKOM UB 2021</h1>
           <h3 className="text-3xl text-center">-Kabinet Mozaik Asa-</h3>
         </div>
-        <div className="absolute bottom-16 text-2xl cursor-pointer">
+        <div
+          className="absolute bottom-16 text-2xl cursor-pointer"
+          onClick={() =>
+            scroller.scrollTo("sambutan", {
+              smooth: true,
+              duration: 600,
+              delay: 200,
+              offset: -75
+            })
+          }
+        >
           <motion.i
             className="fas fa-chevron-down"
             animate={{ y: 16 }}
@@ -59,7 +70,7 @@ const Home = () => {
           ></motion.i>
         </div>
       </div>
-      <div id="articles">
+      <div id="sambutan">
         <div className="px-24 py-20 bg-purple flex flex-row gap-8">
           <div className="flex-none">
             <img

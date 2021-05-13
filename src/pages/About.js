@@ -70,16 +70,22 @@ const About = () => {
         </p>
       </div>
       <div className="flex flex-row ">
-        <div className="w-1/2 bg-purple px-8 py-16 flex">
+        <div className="w-1/2 bg-purple px-8 py-16 flex flex-col">
           <h2 className="text-4xl font-marcellus text-white border-b-2 border-white pb-4">
             ARAH GERAK
           </h2>
+          <div className="h-60"></div>
         </div>
-        <div className="w-1/2 bg-yellow px-8 py-16 flex">
+        <div className="w-1/2 bg-yellow px-8 py-16 flex flex-col">
           <h2 className="text-4xl font-marcellus text-purple border-b-2 border-purple pb-4 ml-auto">
             BUDAYA KERJA
           </h2>
+          <div className="h-60"></div>
         </div>
+      </div>
+      <div className="bg-pink-light flex flex-col justify-center items-center py-20 gap-y-6 text-purple">
+        <h3 className="italic font-aeonik text-2xl">MOZAIK ASA</h3>
+        <h2 className='font-marcellus text-4xl'>"RANGKAI ASA BERSAMA!"</h2>
       </div>
     </div>
   );

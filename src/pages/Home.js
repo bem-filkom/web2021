@@ -1,5 +1,5 @@
 import React from "react";
-import Card from "../components/Card";
+import ArticleCard from "../components/ArticleCard";
 
 const Home = () => {
   return (
@@ -72,7 +72,7 @@ const Home = () => {
           ARTIKEL
         </h2>
         <div className="flex flex-row flex-wrap mt-12">
-          <Card
+          <ArticleCard
             image="https://dummyimage.com/wsxga"
             description="only five centuries, but also the leap into electronic typesetting,
             remaining essentially unchanged. It was popularised in the 1960s
@@ -81,7 +81,7 @@ const Home = () => {
             PageMaker including versions of Lorem Ipsum industry. Lorem Ipsum
             has been the industry's standard dummy text ever"
           />
-          <Card
+          <ArticleCard
             image="https://dummyimage.com/wsxga"
             description="only five centuries, but also the leap into electronic typesetting,
             remaining essentially unchanged. It was popularised in the 1960s
@@ -90,7 +90,7 @@ const Home = () => {
             PageMaker including versions of Lorem Ipsum industry. Lorem Ipsum
             has been the industry's standard dummy text ever"
           />
-          <Card
+          <ArticleCard
             image="https://dummyimage.com/wsxga"
             description="only five centuries, but also the leap into electronic typesetting,
             remaining essentially unchanged. It was popularised in the 1960s

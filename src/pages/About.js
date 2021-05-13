@@ -8,29 +8,46 @@ const About = () => {
           "radial-gradient(102.08% 403.83% at 0% 0%, rgba(192, 181, 146, 0.96) 3.65%, rgba(200, 189, 156, 0.7) 35.94%, rgba(208, 198, 167, 0.5) 67.71%, rgba(242, 242, 242, 0.69) 100%)",
       }}
     >
-      <div className="py-52 text-center text-purple font-marcellus">
+      <div className="py-52 text-center text-purple font-marcellus relative">
         <h2 className="text-4xl mb-4">TENTANG</h2>
         <h1 className="text-5xl">BEM FILKOM UB 2021</h1>
+        <img
+          className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+          src="/assets/pictures/ornament.png"
+          alt="ornament"
+        />
       </div>
-      <div className="w-9/12 mx-auto ">
-        <div
-          className="rounded-2xl flex flex-row px-16 py-12 gap-x-4"
-          style={{ background: "rgba(242, 238, 225, 0.6)" }}
-        >
-          <div className="flex-shrink-0">
-            <img
-              src="/assets/pictures/logo-transparent.png"
-              alt="Logo BEM"
-              className="w-80"
-            />
-          </div>
-          <div className="text-2xl text-purple my-auto">
-            Badan Eksekutif Mahasiswa Fakultas Ilmu Komputer Universitas
-            Brawijaya (BEM FILKOM UB) merupakan bla bla bla aaaaaaaa
-            aaaaaaaaaaaaa aaaaaaaa aaaaaaaaaa aaaaaaaaaaa aaa aaaaaa aaaaaaaaa
-            aaaa aaaa aaaaa aaaaa
+      <div className="relative">
+        <div className="w-9/12 mx-auto ">
+          <div
+            className="rounded-2xl flex flex-row px-16 py-12 gap-x-4 relative z-10"
+            style={{ background: "rgba(242, 238, 225, 0.6)" }}
+          >
+            <div className="flex-shrink-0">
+              <img
+                src="/assets/pictures/logo-transparent.png"
+                alt="Logo BEM"
+                className="w-80"
+              />
+            </div>
+            <div className="text-2xl text-purple my-auto">
+              Badan Eksekutif Mahasiswa Fakultas Ilmu Komputer Universitas
+              Brawijaya (BEM FILKOM UB) merupakan bla bla bla aaaaaaaa
+              aaaaaaaaaaaaa aaaaaaaa aaaaaaaaaa aaaaaaaaaaa aaa aaaaaa aaaaaaaaa
+              aaaa aaaa aaaaa aaaaa
+            </div>
           </div>
         </div>
+        <img
+          className="absolute -bottom-12 w-56"
+          src="/assets/pictures/ornament.png"
+          alt="ornament"
+        />
+        <img
+          className="absolute right-0 -top-20 w-64"
+          src="/assets/pictures/ornament.png"
+          alt="ornament"
+        />
       </div>
       <div className="mt-20 px-24 py-12 text-purple bg-yellow">
         <h2 className="text-4xl text-right font-marcellus border-b-2 border-purple pb-4">
@@ -85,7 +102,7 @@ const About = () => {
       </div>
       <div className="bg-pink-light flex flex-col justify-center items-center py-20 gap-y-6 text-purple">
         <h3 className="italic font-aeonik text-2xl">MOZAIK ASA</h3>
-        <h2 className='font-marcellus text-4xl'>"RANGKAI ASA BERSAMA!"</h2>
+        <h2 className="font-marcellus text-4xl">"RANGKAI ASA BERSAMA!"</h2>
       </div>
     </div>
   );

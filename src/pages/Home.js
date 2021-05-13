@@ -1,9 +1,39 @@
 import React from "react";
 import ArticleCard from "../components/ArticleCard";
+import { motion } from "framer-motion";
 
 const Home = () => {
+  const svgVariants = {
+    hidden: { rotate: -180 },
+    visible: {
+      rotate: 0,
+      transition: { duration: 1 },
+    },
+  };
+
+  const pathVariants = {
+    hidden: {
+      opacity: 0,
+      pathLength: 0,
+    },
+    visible: {
+      opacity: 1,
+      pathLength: 1,
+      transition: {
+        duration: 2,
+        ease: "easeInOut",
+      },
+    },
+  };
+
   return (
-    <div id="landing-page">
+    <motion.div
+      id="landing-page"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.3 }}
+    >
       <div
         className="min-h-screen flex justify-center items-center text-white relative"
         style={{
@@ -17,8 +47,16 @@ const Home = () => {
           <h1 className="text-5xl">BEM FILKOM UB 2021</h1>
           <h3 className="text-3xl text-center">-Kabinet Mozaik Asa-</h3>
         </div>
-        <div className="absolute bottom-20 text-2xl">
-          <i className="fas fa-chevron-down"></i>
+        <div className="absolute bottom-16 text-2xl cursor-pointer">
+          <motion.i
+            className="fas fa-chevron-down"
+            animate={{ y: 16 }}
+            transition={{
+              repeat: Infinity,
+              duration: 0.5,
+              repeatType: "reverse",
+            }}
+          ></motion.i>
         </div>
       </div>
       <div id="articles">
@@ -100,7 +138,7 @@ const Home = () => {
             has been the industry's standard dummy text ever"
           />
         </div>
-        <div className='flex mt-12'>
+        <div className="flex mt-12">
           <a className="px-8 py-2 text-lg font-marcellus rounded-full font-semibold bg-yellow-light border-2 border-black mx-auto">
             Read More
           </a>
@@ -118,7 +156,16 @@ const Home = () => {
           />
         </div>
       </div>
-    </div>
+      <div className="py-16 bg-pink-light">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3951.4264334819277!2d112.61231751459947!3d-7.954807294270353!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7882798282a3fd%3A0x1bca73cef46dbaa3!2sBEM%20FILKOM%20UB!5e0!3m2!1sen!2sid!4v1620894336692!5m2!1sen!2sid"
+          style={{ border: 0 }}
+          allowfullscreen=""
+          loading="lazy"
+          className="mx-auto w-8/12 h-96"
+        ></iframe>
+      </div>
+    </motion.div>
   );
 };
 

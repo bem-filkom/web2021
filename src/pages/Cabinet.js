@@ -3,10 +3,17 @@ import PersonCard from "../components/PersonCard";
 import Profile from "../components/Profile";
 import Program from "../components/Program";
 import Underline from "../components/Underline";
+import { motion } from "framer-motion";
 
 const Cabinet = () => {
   return (
-    <div className='bg-gray'>
+    <motion.div
+      className="bg-gray"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.3 }}
+    >
       <div className="max-w-5xl mx-auto pt-8">
         <div>
           <img
@@ -42,7 +49,7 @@ const Cabinet = () => {
         <h2 className="text-purple text-center text-5xl font-marcellus">
           Tupoksi
         </h2>
-        <Underline/>
+        <Underline />
         <div className="max-w-5xl mx-auto bg-yellow-light rounded-xl mt-8 shadow-lg text-xl px-8 py-4">
           orem Ipsum is simply dummy text of the printing and typesetting
           industry. Lorem Ipsum has been the industry's standard dummy text ever
@@ -56,7 +63,7 @@ const Cabinet = () => {
         <h2 className="text-purple text-center text-5xl font-marcellus">
           Program Kerja
         </h2>
-        <Underline/>
+        <Underline />
         <div className="max-w-4xl mx-auto rounded-xl mt-4 text-xl px-8 py-4 justify-between flex flex-row flex-wrap">
           <Program name="PK2Maba" />
           <Program name="Web BEM FILKOM" />
@@ -65,7 +72,7 @@ const Cabinet = () => {
           <Program name="Web BEM FILKOM" />
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

@@ -1,8 +1,13 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 const About = () => {
   return (
-    <div
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.3 }}
       style={{
         background:
           "radial-gradient(102.08% 403.83% at 0% 0%, rgba(192, 181, 146, 0.96) 3.65%, rgba(200, 189, 156, 0.7) 35.94%, rgba(208, 198, 167, 0.5) 67.71%, rgba(242, 242, 242, 0.69) 100%)",
@@ -104,7 +109,7 @@ const About = () => {
         <h3 className="italic font-aeonik text-2xl">MOZAIK ASA</h3>
         <h2 className="font-marcellus text-4xl">"RANGKAI ASA BERSAMA!"</h2>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

@@ -5,7 +5,7 @@ const PersonCard = ({ photo, name, role }) => {
   return (
     <div className="flex flex-col w-64 ">
       <div>
-        <img src={photo} alt="Member Photo" className="w-full" />
+        <img src={photo} alt="Member" className="w-full" />
       </div>
       <Profile name={name} role={role} />
     </div>

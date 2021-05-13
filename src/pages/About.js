@@ -67,7 +67,7 @@ const About = () => {
         <h2 className="text-4xl font-marcellus border-b-2 border-purple pb-4">
           MISI
         </h2>
-        <p className="text-2xl py-8 font-aeonik">
+        <div className="text-2xl py-8 font-aeonik">
           <ul className="list-decimal pl-6">
             <li>
               Membangun internal BEM FILKOM UB yang berporos profesionalitas
@@ -89,7 +89,7 @@ const About = () => {
               Mengkolaborasikan seluruh elemen FILKOM UB secara komprehensif{" "}
             </li>
           </ul>
-        </p>
+        </div>
       </div>
       <div className="flex flex-row ">
         <div className="w-1/2 bg-purple px-8 py-16 flex flex-col">

@@ -35,3 +35,9 @@
 body{
     background-color: #E5DDC5;
 }
+
+@media (max-width: 767px) {
+    .nav-list{
+        min-height: calc(100vh - 80px);
+    }
+}

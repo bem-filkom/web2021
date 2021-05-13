@@ -16,10 +16,12 @@ const Navbar = () => {
   };
 
   const toggleBackground = () => {
-    if (window.scrollY > 92) {
+    if (window.scrollY > 80) {
       setBackground(true);
+      console.log("keliatan");
     } else {
       setBackground(false);
+      console.log("nope");
     }
   };
 
@@ -38,7 +40,11 @@ const Navbar = () => {
         <NavLogo />
         <NavList />
       </motion.div>
-      <div className="flex flex-col fixed top-0 w-full bg-purple md:hidden z-20">
+      <div
+        className={`flex flex-col top-0 w-full ${
+          home ? "fixed" : "sticky"
+        } bg-purple md:hidden z-20`}
+      >
         <NavLogo isOpen={isOpen} setIsOpen={setIsOpen} />
         <NavList isOpen={isOpen} setIsOpen={setIsOpen} />
       </div>

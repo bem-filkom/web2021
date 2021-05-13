@@ -23,24 +23,23 @@ const Home = () => {
           backgroundSize: "cover",
         }}
       >
-        <div className="flex flex-col gap-2 font-marcellus">
-          <h1 className="text-5xl">BEM FILKOM UB 2021</h1>
-          <h3 className="text-3xl text-center">-Kabinet Mozaik Asa-</h3>
+        <div className="flex flex-col gap-4 md:gap-2 font-marcellus">
+          <h1 className="text-4xl md:text-5xl text-center">BEM FILKOM UB 2021</h1>
+          <h3 className="text-2xl md:text-3xl text-center">-Kabinet Mozaik Asa-</h3>
         </div>
         <div
           className="absolute bottom-16 text-2xl cursor-pointer"
           onClick={() =>
             scroller.scrollTo("sambutan", {
               smooth: true,
-              duration: 600,
-              delay: 200,
+              duration: 500,
               offset: -75,
             })
           }
         >
           <motion.i
             className="fas fa-chevron-down"
-            animate={{ y: 16 }}
+            animate={{ y: 20 }}
             transition={{
               repeat: Infinity,
               duration: 0.5,
@@ -50,7 +49,7 @@ const Home = () => {
         </div>
       </div>
       <div id="sambutan">
-        <div className="px-24 py-20 bg-purple flex flex-col md:flex-row gap-8">
+        <div className="px-12 md:px-24 py-16 md:py-20 bg-purple flex flex-col md:flex-row gap-8">
           <div className="flex-none">
             <img
               src="https://paulsexcavations.com.au/wp-content/uploads/2017/11/dummy-image-1-300x298.jpg"
@@ -65,7 +64,7 @@ const Home = () => {
             and scrambled it to make a type specimen book. It has survived not
           </div>
         </div>
-        <div className="px-24 py-20 bg-purple flex flex-col-reverse md:flex-row gap-8 ">
+        <div className="px-12 md:px-24 py-16 md:py-20 bg-purple flex flex-col-reverse md:flex-row gap-8 ">
           <div className="text-white font-aeonik text-lg flex-auto text-justify">
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry's standard dummy text
@@ -81,7 +80,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className="px-24 py-16">
+      <div className="px-12 md:px-24 py-16">
         <h2 className="text-purple text-center font-marcellus text-4xl font-bold">
           ARTIKEL
         </h2>

@@ -16,8 +16,8 @@ const App = () => {
   const location = useLocation();
   return (
     <>
-      <ScrollToTop />
       <Navbar />
+      <ScrollToTop />
       <AnimatePresence exitBeforeEnter initial={false}>
         <Switch location={location} key={location.pathname}>
           <Route path="/" component={Home} exact />

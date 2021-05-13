@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <footer className="bg-purple pt-8 px-24">
+    <footer className="bg-purple pt-8 px-12 md:px-24">
       <div className="flex flex-wrap flex-row pb-8 justify-between">
         <div className="w-80 text-2xl my-6">
           <h3 className="text-yellow  mb-4 font-marcellus">
@@ -20,7 +20,7 @@ const Footer = () => {
             Ikuti Kami
           </h3>
           <div className="flex">
-            <div className="text-white flex flex-row gap-x-4 text-5xl">
+            <div className="text-white flex flex-row gap-x-4 text-3xl md:text-5xl">
               <div>
                 <i className="fab fa-instagram"></i>
               </div>

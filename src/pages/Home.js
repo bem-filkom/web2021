@@ -1,8 +1,9 @@
-import React, {useEffect} from "react";
+import React, { useEffect } from "react";
 import ArticleCard from "../components/ArticleCard";
-import { motion , useAnimation} from "framer-motion";
+import { motion, useAnimation } from "framer-motion";
 import Underline from "../components/Underline";
 import { HashLink } from "react-router-hash-link";
+import Container from "../components/Container";
 
 const Home = () => {
   const variants = {
@@ -21,9 +22,9 @@ const Home = () => {
 
   const controls = useAnimation();
 
-  useEffect(()=>{
-    controls.start('down')
-  })
+  useEffect(() => {
+    controls.start("down");
+  });
 
   return (
     <motion.div
@@ -63,36 +64,52 @@ const Home = () => {
           </HashLink>
         </div>
       </div>
-      <div id="sambutan">
+      <div id="sambutan" className='overflow-x-hidden'>
         <div className="px-12 md:px-24 py-16 md:py-20 bg-purple flex flex-col sm:flex-row gap-8">
-          <div className="flex-none">
+          <Container
+            className="flex-none"
+            hidden={{ x: "-100%", opacity: 0 }}
+            visible={{ x: "0", opacity: 1 }}
+          >
             <img
               src="https://paulsexcavations.com.au/wp-content/uploads/2017/11/dummy-image-1-300x298.jpg"
               className="w-full md:w-60 lg:w-80 mx-auto"
               alt="Presiden BEM"
             />
-          </div>
-          <div className="text-white font-aeonik text-lg flex-auto text-justify">
+          </Container>
+          <Container
+            hidden={{ x: "100%", opacity: 0 }}
+            visible={{ x: "0", opacity: 1 }}
+            className="text-white font-aeonik text-lg flex-auto text-justify"
+          >
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry's standard dummy text
             ever since the 1500s, when an unknown printer took a galley of type
             and scrambled it to make a type specimen book. It has survived not
-          </div>
+          </Container>
         </div>
         <div className="px-12 md:px-24 py-16 md:py-20 bg-purple flex flex-col-reverse sm:flex-row gap-8 ">
-          <div className="text-white font-aeonik text-lg flex-auto text-justify">
+          <Container
+            hidden={{ x: "-100%", opacity: 0 }}
+            visible={{ x: "0", opacity: 1 }}
+            className="text-white font-aeonik text-lg flex-auto text-justify"
+          >
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry's standard dummy text
             ever since the 1500s, when an unknown printer took a galley of type
             and scrambled it to make a type specimen book. It has survived not
-          </div>
-          <div className="flex-none">
+          </Container>
+          <Container
+            hidden={{ x: "100%", opacity: 0 }}
+            visible={{ x: "0", opacity: 1 }}
+            className="flex-none"
+          >
             <img
               src="https://paulsexcavations.com.au/wp-content/uploads/2017/11/dummy-image-1-300x298.jpg"
               className="w-full md:w-60 lg:w-80 mx-auto"
               alt="Presiden BEM"
             />
-          </div>
+          </Container>
         </div>
       </div>
       <div className="px-12 md:px-24 py-16">

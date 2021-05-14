@@ -10,7 +10,7 @@ const Container = ({ children, visible, hidden, ...props }) => {
     if (inView) {
       controls.start("visible");
     }
-  });
+  }, [controls, inView]);
 
   return (
     <motion.div

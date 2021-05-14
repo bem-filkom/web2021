@@ -19,12 +19,12 @@ const App = () => {
     <>
       <Navbar />
       <ScrollToTop />
-      <AnimatePresence exitBeforeEnter initial={false}>
+      <AnimatePresence exitBeforeEnter>
         <Switch location={location} key={location.pathname}>
-          <Route path="/" component={Home} exact />
           <Route path="/tentang" component={About} exact />
           <Route path="/kabinet" component={Cabinet} exact />
           <Route path="/kalender" component={Calendar} exact />
+          <Route path="/" component={Home} exact />
         </Switch>
       </AnimatePresence>
       <Footer />

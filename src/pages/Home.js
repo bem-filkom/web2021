@@ -1,6 +1,6 @@
-import React, { useEffect } from "react";
+import React from "react";
 import ArticleCard from "../components/ArticleCard";
-import { motion, useAnimation } from "framer-motion";
+import { motion } from "framer-motion";
 import Underline from "../components/Underline";
 import { HashLink } from "react-router-hash-link";
 import Container from "../components/Container";
@@ -19,12 +19,6 @@ const Home = () => {
       },
     },
   };
-
-  const controls = useAnimation();
-
-  useEffect(() => {
-    controls.start("down");
-  });
 
   return (
     <motion.div
@@ -45,9 +39,12 @@ const Home = () => {
         }}
       >
         <div className="flex flex-col gap-4 md:gap-2 font-marcellus">
-          <h1 className="text-4xl md:text-5xl text-center">
+          <motion.h1
+            className="text-4xl md:text-5xl text-center"
+            transition={{ duration: 2 }}
+          >
             BEM FILKOM UB 2021
-          </h1>
+          </motion.h1>
           <h3 className="text-2xl md:text-3xl text-center">
             -Kabinet Mozaik Asa-
           </h3>
@@ -58,13 +55,13 @@ const Home = () => {
               className="w-12"
               src="/assets/pictures/down-arrow.png"
               initial="up"
-              animate={controls}
+              animate="down"
               variants={variants}
             />
           </HashLink>
         </div>
       </div>
-      <div id="sambutan" className='overflow-x-hidden'>
+      <div id="sambutan" className="overflow-x-hidden">
         <div className="px-12 md:px-24 py-16 md:py-20 bg-purple flex flex-col sm:flex-row gap-8">
           <Container
             className="flex-none"
@@ -117,7 +114,14 @@ const Home = () => {
           ARTIKEL
         </h2>
         <Underline />
-        <div className="flex flex-row flex-wrap mt-4 ">
+        <Container
+          hidden={{ opacity: 0 }}
+          visible={{
+            opacity: 1,
+            transition: { staggerChildren: 0.4, when: "beforeChildren" },
+          }}
+          className="flex flex-row flex-wrap mt-4 "
+        >
           <ArticleCard
             image="https://dummyimage.com/wsxga"
             description="only five centuries, but also the leap into electronic typesetting,
@@ -145,7 +149,7 @@ const Home = () => {
             PageMaker including versions of Lorem Ipsum industry. Lorem Ipsum
             has been the industry's standard dummy text ever"
           />
-        </div>
+        </Container>
         <div className="flex mt-8">
           <a
             href="https://www.instagram.com"

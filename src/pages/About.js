@@ -14,7 +14,7 @@ const About = () => {
       }}
     >
       <div className="py-52 text-center text-purple font-marcellus relative">
-        <h2 className="text-4xl mb-4 relative z-10">TENTANG</h2>
+        <motion.h2 className="text-4xl mb-4 relative z-10">TENTANG</motion.h2>
         <h1 className="text-5xl relative z-10">BEM FILKOM UB 2021</h1>
         <img
           className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 "

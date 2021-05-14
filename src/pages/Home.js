@@ -1,11 +1,10 @@
 import React from "react";
 import ArticleCard from "../components/ArticleCard";
 import { motion } from "framer-motion";
-import { scroller } from "react-scroll";
 import Underline from "../components/Underline";
+import { HashLink } from "react-router-hash-link";
 
 const Home = () => {
-  
   return (
     <motion.div
       id="landing-page"
@@ -21,39 +20,38 @@ const Home = () => {
             "linear-gradient(to right, rgba(71, 30, 60, 0.72),rgba(71, 30, 60, 0.72)),url('/assets/backgrounds/filkom.jpg')",
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
+          backgroundPosition:'center'
         }}
       >
         <div className="flex flex-col gap-4 md:gap-2 font-marcellus">
-          <h1 className="text-4xl md:text-5xl text-center">BEM FILKOM UB 2021</h1>
-          <h3 className="text-2xl md:text-3xl text-center">-Kabinet Mozaik Asa-</h3>
+          <h1 className="text-4xl md:text-5xl text-center">
+            BEM FILKOM UB 2021
+          </h1>
+          <h3 className="text-2xl md:text-3xl text-center">
+            -Kabinet Mozaik Asa-
+          </h3>
         </div>
-        <div
-          className="absolute bottom-16 text-2xl cursor-pointer"
-          onClick={() =>
-            scroller.scrollTo("sambutan", {
-              smooth: true,
-              duration: 500,
-              offset: -75,
-            })
-          }
-        >
-          <motion.i
-            className="fas fa-chevron-down"
-            animate={{ y: 20 }}
-            transition={{
-              repeat: Infinity,
-              duration: 0.5,
-              repeatType: "reverse",
-            }}
-          ></motion.i>
+        <div className=" text-2xl absolute bottom-20 left-1/2 transform -translate-x-1/2">
+          <HashLink smooth to="/#sambutan">
+            <motion.img
+              animate={{ y: 24 }}
+              transition={{
+                repeat: Infinity,
+                duration: 0.8,
+                repeatType: "reverse",
+              }}
+              src="/assets/pictures/down-arrow.png"
+              className="w-12 "
+            />
+          </HashLink>
         </div>
       </div>
       <div id="sambutan">
-        <div className="px-12 md:px-24 py-16 md:py-20 bg-purple flex flex-col md:flex-row gap-8">
+        <div className="px-12 md:px-24 py-16 md:py-20 bg-purple flex flex-col sm:flex-row gap-8">
           <div className="flex-none">
             <img
               src="https://paulsexcavations.com.au/wp-content/uploads/2017/11/dummy-image-1-300x298.jpg"
-              className="w-full sm:w-60 lg:w-80 mx-auto"
+              className="w-full md:w-60 lg:w-80 mx-auto"
               alt="Presiden BEM"
             />
           </div>
@@ -64,7 +62,7 @@ const Home = () => {
             and scrambled it to make a type specimen book. It has survived not
           </div>
         </div>
-        <div className="px-12 md:px-24 py-16 md:py-20 bg-purple flex flex-col-reverse md:flex-row gap-8 ">
+        <div className="px-12 md:px-24 py-16 md:py-20 bg-purple flex flex-col-reverse sm:flex-row gap-8 ">
           <div className="text-white font-aeonik text-lg flex-auto text-justify">
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry's standard dummy text
@@ -74,7 +72,7 @@ const Home = () => {
           <div className="flex-none">
             <img
               src="https://paulsexcavations.com.au/wp-content/uploads/2017/11/dummy-image-1-300x298.jpg"
-              className="w-full sm:w-60 lg:w-80 mx-auto"
+              className="w-full md:w-60 lg:w-80 mx-auto"
               alt="Presiden BEM"
             />
           </div>
@@ -115,7 +113,11 @@ const Home = () => {
           />
         </div>
         <div className="flex mt-8">
-          <a href='https://www.instagram.com' target='blank' className="px-8 py-2 text-lg font-marcellus rounded-full font-semibold bg-yellow-light border-2 border-black mx-auto">
+          <a
+            href="https://www.instagram.com"
+            target="blank"
+            className="px-8 py-2 text-lg font-marcellus rounded-full font-semibold bg-yellow-light border-2 border-black mx-auto"
+          >
             Read More
           </a>
         </div>

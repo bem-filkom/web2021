@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import NavList from "./NavList";
 import NavLogo from "./NavLogo";
 import { useLocation } from "react-router-dom";
@@ -15,17 +15,19 @@ const Navbar = () => {
     visible: { backgroundColor: "#471F3C", transition: { duration: 0.5 } },
   };
 
-  const toggleBackground = () => {
-    if (window.scrollY > 80) {
-      setBackground(true);
-      console.log("keliatan");
-    } else {
-      setBackground(false);
-      console.log("nope");
-    }
-  };
-
-  window.addEventListener("scroll", toggleBackground);
+  useEffect(() => {
+    const toggleBackground = () => {
+      if (window.scrollY > 80) {
+        setBackground(true);
+      } else {
+        setBackground(false);
+      }
+    };
+    window.addEventListener("scroll", toggleBackground);
+    return () => {
+      window.removeEventListener("scroll", toggleBackground);
+    };
+  }, []);
 
   return (
     <>

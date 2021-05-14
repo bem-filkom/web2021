@@ -23,19 +23,19 @@ const About = () => {
         />
       </div>
       <div className="relative">
-        <div className="w-9/12 mx-auto ">
+        <div className="w-11/12 md:w-10/12 lg:w-9/12 mx-auto">
           <div
-            className="rounded-2xl flex flex-row px-16 py-12 gap-x-4 relative z-10"
+            className="rounded-2xl flex flex-col md:flex-row px-8 md:px-16 py-12 gap-x-4 relative z-10"
             style={{ background: "rgba(242, 238, 225, 0.6)" }}
           >
-            <div className="flex-shrink-0">
+            <div className="flex-shrink-0 flex items-center justify-center">
               <img
                 src="/assets/pictures/logo-transparent.png"
                 alt="Logo BEM"
-                className="w-80"
+                className="w-full md:w-60 lg:w-80"
               />
             </div>
-            <div className="text-2xl text-purple my-auto">
+            <div className="flex-auto text-xl lg:text-2xl text-justify text-purple my-auto">
               Badan Eksekutif Mahasiswa Fakultas Ilmu Komputer Universitas
               Brawijaya (BEM FILKOM UB) merupakan bla bla bla aaaaaaaa
               aaaaaaaaaaaaa aaaaaaaa aaaaaaaaaa aaaaaaaaaaa aaa aaaaaa aaaaaaaaa
@@ -54,16 +54,16 @@ const About = () => {
           alt="ornament"
         />
       </div>
-      <div className="mt-20 px-24 py-12 text-purple bg-yellow">
+      <div className="mt-20 px-12 md:px-24 py-12 text-purple bg-yellow">
         <h2 className="text-4xl text-right font-marcellus border-b-2 border-purple pb-4">
           VISI
         </h2>
-        <p className="text-2xl px-16 py-8 font-aeonik">
+        <p className="text-2xl py-8 font-aeonik">
           BEM FILKOM UB Sebagai wadah multi arti sehingga terwujudnya kolaborasi
           aksi untuk FILKOM, Brawijaya, dan Indonesia
         </p>
       </div>
-      <div className="px-24 py-12 text-purple bg-gray">
+      <div className="px-12 md:px-24 py-12 text-purple bg-gray">
         <h2 className="text-4xl font-marcellus border-b-2 border-purple pb-4">
           MISI
         </h2>
@@ -91,23 +91,23 @@ const About = () => {
           </ul>
         </div>
       </div>
-      <div className="flex flex-row ">
-        <div className="w-1/2 bg-purple px-8 py-16 flex flex-col">
+      <div className="flex flex-col md:flex-row">
+        <div className="w-full md:w-1/2 bg-purple px-8 py-16 flex flex-col">
           <h2 className="text-4xl font-marcellus text-white border-b-2 border-white pb-4">
             ARAH GERAK
           </h2>
-          <div className="h-60"></div>
+          <div className="h-80"></div>
         </div>
-        <div className="w-1/2 bg-yellow px-8 py-16 flex flex-col">
-          <h2 className="text-4xl font-marcellus text-purple border-b-2 border-purple pb-4 ml-auto">
+        <div className="w-full md:w-1/2 bg-yellow px-8 py-16 flex flex-col">
+          <h2 className="text-4xl font-marcellus text-purple border-b-2 border-purple pb-4 md:ml-auto">
             BUDAYA KERJA
           </h2>
-          <div className="h-60"></div>
+          <div className="h-80"></div>
         </div>
       </div>
       <div className="bg-pink-light flex flex-col justify-center items-center py-20 gap-y-6 text-purple">
         <h3 className="italic font-aeonik text-2xl">MOZAIK ASA</h3>
-        <h2 className="font-marcellus text-4xl">"RANGKAI ASA BERSAMA!"</h2>
+        <h2 className="font-marcellus text-4xl text-center">"RANGKAI ASA BERSAMA!"</h2>
       </div>
     </motion.div>
   );

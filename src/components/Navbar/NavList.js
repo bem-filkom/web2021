@@ -33,7 +33,7 @@ const NavList = ({ isOpen, setIsOpen }) => {
         className="flex md:hidden bg-purple w-full text-center justify-around mt-20 absolute flex-col mx-auto nav-list"
       >
         {NAVBAR_ITEMS.map((item, idx) => (
-          <NavItem key={idx} name={item.name} pathname={item.pathname} />
+          <NavItem key={idx} name={item.name} pathname={item.pathname} isOpen = {isOpen} setIsOpen = {setIsOpen}/>
         ))}
       </motion.div>
     </>

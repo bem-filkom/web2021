@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer className="bg-purple pt-8 px-12 md:px-24">
       <div className="flex flex-wrap flex-row pb-8 justify-between">
-        <div className="w-80 text-2xl my-6">
+        <div className="w-full sm:px-4 xs:w-1/2 md:w-1/3 text-2xl my-6">
           <h3 className="text-yellow  mb-4 font-marcellus">
             Hubungi Kami
           </h3>
@@ -15,12 +15,12 @@ const Footer = () => {
             <p> (OVO boleh lah) </p>
           </div>
         </div>
-        <div className="w-80 text-2xl my-6">
+        <div className="w-full sm:px-4 xs:w-1/2 md:w-1/3 text-2xl my-6">
           <h3 className="text-yellow  mb-4 font-marcellus">
             Ikuti Kami
           </h3>
           <div className="flex">
-            <div className="text-white flex flex-row gap-x-4 text-3xl md:text-5xl">
+            <div className="text-white flex flex-row flex-wrap gap-x-4 text-3xl md:text-4xl">
               <div>
                 <i className="fab fa-instagram"></i>
               </div>
@@ -39,7 +39,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="w-80 text-2xl my-6">
+        <div className="w-full sm:px-4 xs:w-1/2 md:w-1/3 text-2xl my-6">
           <h3 className="text-yellow  mb-4 font-marcellus">
             Tautan Terkait
           </h3>
@@ -69,7 +69,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className='text-center text-white py-6 font-aeonik border-t-2 border-white'>
+      <div className='text-center text-white py-4 font-aeonik border-t-2 border-white'>
         Copyright &copy; 2021 BEM FILKOM UB Kabinet Mozaik Asa | Biro Pengembangan
         Informasi &amp; Teknologi
       </div>

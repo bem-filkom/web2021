@@ -32,6 +32,10 @@
     background-color: orange;
 }
 
+*{
+    scroll-padding : 80px;
+}
+
 body{
     background-color: #E5DDC5;
 }

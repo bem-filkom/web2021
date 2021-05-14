@@ -3,6 +3,9 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
+      screens:{
+        'xs' : '576px'
+      },
       colors: {
         purple: {
           DEFAULT: "#471F3C",

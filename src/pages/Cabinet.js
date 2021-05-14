@@ -19,7 +19,7 @@ const Cabinet = () => {
         primaryTitle="KEBIROAN"
         secondaryTitle="PENGEMBANGAN INFORMASI &amp; TEKNOLOGI"
       />
-      <div className="max-w-5xl mx-auto pt-8">
+      <div className="max-w-5xl px-12 md:px-24 mx-auto pt-12">
         <div>
           <img
             src="/assets/pictures/wide-rectangle.jpg"
@@ -33,7 +33,7 @@ const Cabinet = () => {
           <Profile name="Salsabila Nur M." role="STAF" />
         </div>
       </div>
-      <div className="flex flex-row flex-wrap justify-around max-w-6xl py-12 mx-auto">
+      <div className="flex flex-row flex-wrap justify-around px-12 md:px-24 max-w-6xl py-12 mx-auto">
         <PersonCard
           photo={"/assets/pictures/rectangle.png"}
           name="Salsabila Nur M."
@@ -50,18 +50,16 @@ const Cabinet = () => {
           role="STAF"
         />
       </div>
-      <div className="py-12">
+      <div className="py-12 px-8 md:px-24">
         <h2 className="text-purple text-center text-5xl font-marcellus">
           Tupoksi
         </h2>
         <Underline />
-        <div className="max-w-5xl mx-auto bg-yellow-light rounded-xl mt-8 shadow-lg text-xl px-8 py-4">
+        <div className="max-w-5xl mx-auto bg-yellow-light rounded-xl mt-8 shadow-lg text-xl px-4 md:px-8 py-4">
           orem Ipsum is simply dummy text of the printing and typesetting
           industry. Lorem Ipsum has been the industry's standard dummy text ever
           since the 1500s, when an unknown printer took a galley of type and
-          scrambled it to make a type specimen book. It has survived not only
-          five centuries, but also the leap into electronic typesetting,
-          remaining essentially unchanged. It was popularised in the 1
+          scrambled it to make a type specimen book
         </div>
       </div>
       <div className="py-12">

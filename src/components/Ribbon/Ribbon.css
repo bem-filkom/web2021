@@ -17,8 +17,8 @@
   border-right-color: transparent !important;
 }
 
-.ribbon{
-    background-color: #673258;
+.ribbon {
+  background-color: #673258;
 }
 
 .ribbon::after,
@@ -39,4 +39,34 @@
 .ribbon::before {
   left: 0;
   border-width: 3.5rem 0rem 0rem 3.5rem;
+}
+
+
+@media screen and (max-width: 768px) {
+  .ribbon-wrapper::after,
+  .ribbon-wrapper::before {
+    border-width: 40px;
+    bottom: -2rem;
+  }
+
+  .ribbon-wrapper::before {
+    left: -3rem;
+  }
+
+  .ribbon-wrapper::after {
+    right: -3rem;
+  }
+
+  .ribbon::after,
+  .ribbon::before {
+    bottom: -2rem;
+  }
+
+  .ribbon::after {
+    border-width: 2rem 2rem 0rem 0rem;
+  }
+
+  .ribbon::before {
+    border-width: 2rem 0rem 0rem 2rem;
+  }
 }

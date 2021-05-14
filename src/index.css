@@ -3,45 +3,54 @@
 @tailwind utilities;
 
 @font-face {
-    font-family: 'Marcellus';
-    src: url('./fonts/Marcellus-Regular.ttf');
+  font-family: "Marcellus";
+  src: url("./fonts/Marcellus-Regular.ttf");
 }
 
 @font-face {
-    font-family: 'Aeonik';
-    src: url('./fonts/Aeonik-Regular.otf');
+  font-family: "Aeonik";
+  src: url("./fonts/Aeonik-Regular.otf");
 }
 
-
-.font-marcellus{
-    font-family: 'Marcellus', serif;
+.font-marcellus {
+  font-family: "Marcellus", serif;
 }
 
-.font-aeonik{
-    font-family: 'Aeonik', serif;
+.font-aeonik {
+  font-family: "Aeonik", serif;
 }
 
-.active::after{
-    content: '';
-    position: absolute;
-    width: 2rem;
-    height: 2px;
-    bottom : 1.4rem;
-    left : 50%;
-    transform : translateX(-50%);
-    background-color: orange;
+.active::after {
+  content: "";
+  position: absolute;
+  width: 2rem;
+  height: 2px;
+  bottom: 1.4rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: orange;
 }
 
-*{
-    scroll-padding : 80px;
+* {
+  scroll-padding: 80px;
 }
 
-body{
-    background-color: #E5DDC5;
+body {
+  background-color: #e5ddc5;
+}
+
+.min-h-screen {
+  min-height: calc(var(--vh, 1vh) * 100 );
+}
+
+@media screen and (max-width: 1024px) {
+  html {
+    font-size: 80%;
+  }
 }
 
 @media (max-width: 767px) {
-    .nav-list{
-        min-height: calc(100vh - 80px);
-    }
+  .nav-list {
+    min-height: calc(100vh - 80px);
+  }
 }

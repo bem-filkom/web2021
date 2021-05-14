@@ -27,7 +27,7 @@ const Cabinet = () => {
             className="mx-auto"
           />
         </div>
-        <div className="flex flex-row justify-around py-4">
+        <div className="flex flex-row flex-wrap justify-around py-4 gap-x-2 gap-y-4">
           <Profile name="Salsabila Nur M." role="STAF" />
           <Profile name="Salsabila Nur M." role="STAF" />
           <Profile name="Salsabila Nur M." role="STAF" />
@@ -50,7 +50,7 @@ const Cabinet = () => {
           role="STAF"
         />
       </div>
-      <div className="py-12 px-8 md:px-24">
+      <div className="py-8 md:py-12 px-8 md:px-24">
         <h2 className="text-purple text-center text-5xl font-marcellus">
           Tupoksi
         </h2>

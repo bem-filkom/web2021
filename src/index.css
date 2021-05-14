@@ -32,7 +32,7 @@
 }
 
 * {
-  scroll-padding: 80px;
+  scroll-padding: 78px;
 }
 
 body {
@@ -40,7 +40,7 @@ body {
 }
 
 .min-h-screen {
-  min-height: calc(var(--vh, 1vh) * 100 );
+  min-height: calc(var(--vh, 1vh) * 100);
 }
 
 @media screen and (max-width: 1024px) {
@@ -51,6 +51,10 @@ body {
 
 @media (max-width: 767px) {
   .nav-list {
-    min-height: calc(100vh - 80px);
+    min-height: calc(var(--vh, 1vh) * 100 - 64px);
+  }
+
+  * {
+    scroll-padding: 64px;
   }
 }

@@ -1,10 +1,30 @@
-import React from "react";
+import React, {useEffect} from "react";
 import ArticleCard from "../components/ArticleCard";
-import { motion } from "framer-motion";
+import { motion , useAnimation} from "framer-motion";
 import Underline from "../components/Underline";
 import { HashLink } from "react-router-hash-link";
 
 const Home = () => {
+  const variants = {
+    up: {
+      y: 0,
+    },
+    down: {
+      y: 24,
+      transition: {
+        repeat: Infinity,
+        duration: 0.8,
+        repeatType: "reverse",
+      },
+    },
+  };
+
+  const controls = useAnimation();
+
+  useEffect(()=>{
+    controls.start('down')
+  })
+
   return (
     <motion.div
       id="landing-page"
@@ -20,7 +40,7 @@ const Home = () => {
             "linear-gradient(to right, rgba(71, 30, 60, 0.72),rgba(71, 30, 60, 0.72)),url('/assets/backgrounds/filkom.jpg')",
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
-          backgroundPosition:'center'
+          backgroundPosition: "center",
         }}
       >
         <div className="flex flex-col gap-4 md:gap-2 font-marcellus">
@@ -34,14 +54,11 @@ const Home = () => {
         <div className=" text-2xl absolute bottom-20 left-1/2 transform -translate-x-1/2">
           <HashLink smooth to="/#sambutan">
             <motion.img
-              animate={{ y: 24 }}
-              transition={{
-                repeat: Infinity,
-                duration: 0.8,
-                repeatType: "reverse",
-              }}
+              className="w-12"
               src="/assets/pictures/down-arrow.png"
-              className="w-12 "
+              initial="up"
+              animate={controls}
+              variants={variants}
             />
           </HashLink>
         </div>

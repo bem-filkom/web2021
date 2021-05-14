@@ -106,8 +106,8 @@ const About = () => {
         </div>
       </div>
       <div className="bg-pink-light flex flex-col justify-center items-center py-20 gap-y-6 text-purple">
-        <h3 className="italic font-aeonik text-2xl">MOZAIK ASA</h3>
-        <h2 className="font-marcellus text-4xl text-center">"RANGKAI ASA BERSAMA!"</h2>
+        <h3 className="italic font-aeonik text-xl md:text-2xl">MOZAIK ASA</h3>
+        <h2 className="font-marcellus text-3xl md:text-4xl text-center">"RANGKAI ASA BERSAMA!"</h2>
       </div>
     </motion.div>
   );

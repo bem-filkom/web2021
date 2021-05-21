@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import Underline from "../components/Underline";
 import { HashLink } from "react-router-hash-link";
 import Container from "../components/Container";
+import PartnershipCarousel from "../components/PartnershipCarousel";
 
 const Home = () => {
   const variants = {
@@ -163,11 +164,7 @@ const Home = () => {
           PARTNERSHIP
         </h2>
         <div className="mt-8">
-          <img
-            src="https://dummyimage.com/vga"
-            alt="Article"
-            className="w-80 mx-auto"
-          />
+          <PartnershipCarousel />
         </div>
       </div>
       <div className="py-16 bg-pink-light">

@@ -91,23 +91,37 @@ const About = () => {
           </ul>
         </div>
       </div>
-      <div className="flex flex-col md:flex-row">
+      <div className="flex flex-col md:flex-row text-white ">
         <div className="w-full md:w-1/2 bg-purple px-8 py-16 flex flex-col">
-          <h2 className="text-4xl font-marcellus text-white border-b-2 border-white pb-4">
+          <h2 className="text-4xl font-marcellus border-b-2 border-white pb-4">
             ARAH GERAK
           </h2>
-          <div className="h-80"></div>
+          <ul className="list-decimal ml-6 mt-5 text-2xl font-aeonik space-y-4">
+            <li>Internal Progan (Profesionalitas Kekeluargaan)</li>
+            <li>Pelayanan Redibel (Responsif Kredibel)</li>
+            <li>Wadah Aktualitasi (Aktualisasi Prestasi)</li>
+            <li>Gerak Stratemis (Strategis Dinamis)</li>
+            <li>Kolaborasi Horitikal (Horizontal Vertikal)</li>
+          </ul>
         </div>
         <div className="w-full md:w-1/2 bg-yellow px-8 py-16 flex flex-col">
-          <h2 className="text-4xl font-marcellus text-purple border-b-2 border-purple pb-4 md:ml-auto">
+          <h2 className="text-4xl font-marcellus text-purple border-b-2 border-purple pb-4 text-right">
             BUDAYA KERJA
           </h2>
-          <div className="h-80"></div>
+          {/* <ul className="list-decimal ml-8 mt-4 text-2xl font-aeonik space-y-4">
+            <li>Internal Progan (Profesionalitas Kekeluargaan)</li>
+            <li>Pelayanan Redibel (Responsif Kredibel)</li>
+            <li>Wadah Aktualitasi (Aktualisasi Prestasi)</li>
+            <li>Gerak Stratemis (Strategis Dinamis)</li>
+            <li>Kolaborasi Horitikal (Horizontal Vertikal)</li>
+          </ul> */}
         </div>
       </div>
       <div className="bg-pink-light flex flex-col justify-center items-center py-20 gap-y-6 text-purple">
         <h3 className="italic font-aeonik text-xl md:text-2xl">MOZAIK ASA</h3>
-        <h2 className="font-marcellus text-3xl md:text-4xl text-center">"RANGKAI ASA BERSAMA!"</h2>
+        <h2 className="font-marcellus text-3xl md:text-4xl text-center">
+          "RANGKAI ASA BERSAMA!"
+        </h2>
       </div>
     </motion.div>
   );

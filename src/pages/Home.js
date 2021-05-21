@@ -62,50 +62,48 @@ const Home = () => {
         </div>
       </div>
       <div id="sambutan" className="overflow-x-hidden">
-        <div className="px-12 md:px-24 py-16 md:py-20 bg-purple flex flex-col sm:flex-row gap-8">
+        <div className="px-12 md:px-24 py-16 md:py-20 bg-purple flex flex-col space-y-6 md:space-y-0 md:flex-row md:space-x-12">
           <Container
-            className="flex-none"
             hidden={{ x: "-100%", opacity: 0 }}
             visible={{ x: "0", opacity: 1 }}
+            className="flex flex-col justify-center space-y-4 w-full md:w-3/12"
+          >
+            <h3 className="text-yellow text-2xl font-semibold">
+              Sambutan Hangat
+            </h3>
+            <p className="text-white text-3xl">Presiden dan Wakil Presiden</p>
+          </Container>
+          <Container
+            className="flex-none  w-full md:w-4/12 flex items-center justify-center"
+            hidden={{ opacity: 0 }}
+            visible={{ opacity: 1 }}
           >
             <img
               src="https://paulsexcavations.com.au/wp-content/uploads/2017/11/dummy-image-1-300x298.jpg"
-              className="w-full md:w-60 lg:w-80 mx-auto"
+              className="w-10/12 md:w-11/12"
               alt="Presiden BEM"
             />
           </Container>
           <Container
             hidden={{ x: "100%", opacity: 0 }}
             visible={{ x: "0", opacity: 1 }}
-            className="text-white font-aeonik text-lg flex-auto text-justify"
+            className="text-white font-aeonik text-md flex-auto text-justify w-full md:w-5/12 flex flex-col justify-around space-y-4 md:space-y-2"
           >
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book. It has survived not
-          </Container>
-        </div>
-        <div className="px-12 md:px-24 py-16 md:py-20 bg-purple flex flex-col-reverse sm:flex-row gap-8 ">
-          <Container
-            hidden={{ x: "-100%", opacity: 0 }}
-            visible={{ x: "0", opacity: 1 }}
-            className="text-white font-aeonik text-lg flex-auto text-justify"
-          >
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book. It has survived not
-          </Container>
-          <Container
-            hidden={{ x: "100%", opacity: 0 }}
-            visible={{ x: "0", opacity: 1 }}
-            className="flex-none"
-          >
-            <img
-              src="https://paulsexcavations.com.au/wp-content/uploads/2017/11/dummy-image-1-300x298.jpg"
-              className="w-full md:w-60 lg:w-80 mx-auto"
-              alt="Presiden BEM"
-            />
+            <p className="text-yellow font-semibold">
+              Assalamu alaikum wr wb. Shalom. Om Swastyastu. Namo Buddhaya
+              Rahayu.
+            </p>
+            <p>
+              Salam hangat dari kita yang terpisah jarak kebersamaan. Di era
+              ini, dihadapi dengan kehidupan normal yang baru, ,membuat adaptasi
+              menjadi langkah terbaik menyambung asa. Namun, yakinlah bahwa
+              melangkah bersama dalam sekat ruang yang ada, menjadikan yang
+              sempit meluas, gelap menerang dan dangkal mendalam menciptakan
+              mozaik dan merangkai asa tak terbatas dari kehidupan.
+            </p>
+            <p className="text-yellow font-semibold">
+              BEM FILKOM 2021 - RANGKAI ASA BERSAMA!
+            </p>
           </Container>
         </div>
       </div>

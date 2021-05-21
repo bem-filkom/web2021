@@ -5,6 +5,9 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
+      spacing:{
+        "88" : "22rem"
+      },
       colors: {
         purple: {
           DEFAULT: "#471F3C",

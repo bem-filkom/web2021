@@ -5,7 +5,7 @@ import Underline from "../components/Underline";
 import { HashLink } from "react-router-hash-link";
 import Container from "../components/Container";
 import PartnershipCarousel from "../components/PartnershipCarousel";
-
+import { Fade } from "react-reveal";
 const Home = () => {
   const variants = {
     up: {
@@ -39,17 +39,19 @@ const Home = () => {
           backgroundPosition: "center",
         }}
       >
-        <div className="flex flex-col gap-4 md:gap-2 font-marcellus">
-          <motion.h1
-            className="text-4xl md:text-5xl text-center"
-            transition={{ duration: 2 }}
-          >
-            BEM FILKOM UB 2021
-          </motion.h1>
-          <h3 className="text-2xl md:text-3xl text-center">
-            -Kabinet Mozaik Asa-
-          </h3>
-        </div>
+        <Fade bottom >
+          <div className="flex flex-col gap-4 md:gap-2 font-marcellus">
+            <motion.h1
+              className="text-4xl md:text-5xl text-center"
+              transition={{ duration: 2 }}
+            >
+              BEM FILKOM UB 2021
+            </motion.h1>
+            <h3 className="text-2xl md:text-3xl text-center">
+              -Kabinet Mozaik Asa-
+            </h3>
+          </div>
+        </Fade>
         <div className=" text-2xl absolute bottom-20 left-1/2 transform -translate-x-1/2">
           <HashLink smooth to="/#sambutan">
             <motion.img
@@ -63,7 +65,7 @@ const Home = () => {
         </div>
       </div>
       <div id="sambutan" className="overflow-x-hidden">
-        <div className="px-12 md:px-24 py-16 md:py-20 bg-purple flex flex-col space-y-6 md:space-y-0 md:flex-row md:space-x-12">
+        <div className="px-12 md:px-24 py-16 md:py-20 bg-green-500 flex flex-col space-y-6 md:space-y-0 md:flex-row md:space-x-12">
           <Container
             hidden={{ x: "-100%", opacity: 0 }}
             visible={{ x: "0", opacity: 1 }}

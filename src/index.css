@@ -33,9 +33,11 @@
   background-color: orange;
 }
 
-* {
-  scroll-padding: 78px;
+
+html {
+  scroll-padding-top: 80px;
 }
+
 
 body {
   background-color: #e5ddc5;
@@ -56,7 +58,7 @@ body {
     min-height: calc(var(--vh, 1vh) * 100 - 64px);
   }
 
-  * {
-    scroll-padding: 64px;
+  html {
+    scroll-padding-top: 64px;
   }
 }

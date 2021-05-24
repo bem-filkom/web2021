@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-
+import { Fade } from "react-reveal";
 const About = () => {
   return (
     <motion.div
@@ -14,8 +14,10 @@ const About = () => {
       }}
     >
       <div className="py-52 text-center text-purple font-marcellus relative">
-        <motion.h2 className="text-4xl mb-4 relative z-10">TENTANG</motion.h2>
-        <h1 className="text-5xl relative z-10">BEM FILKOM UB 2021</h1>
+        <Fade bottom>
+          <h2 className="text-4xl mb-4 relative z-10">TENTANG</h2>
+          <h1 className="text-5xl relative z-10">BEM FILKOM UB 2021</h1>
+        </Fade>
         <img
           className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 "
           src="/assets/pictures/ornament.png"
@@ -68,27 +70,29 @@ const About = () => {
           MISI
         </h2>
         <div className="text-2xl py-8 font-aeonik">
-          <ul className="list-decimal pl-6">
-            <li>
-              Membangun internal BEM FILKOM UB yang berporos profesionalitas
-              berlandaskan kekeluargaan
-            </li>
-            <li>
-              Mewujudkan pelayanan advokasi yang responsif dan kredibel demi
-              kesejahteraan mahasiswa
-            </li>
-            <li>
-              Menciptakan wadah untuk mahasiswa agar mencapai aktualisasi diri
-              agar terciptanya aksi prestasi
-            </li>
+          <Fade cascade bottom>
+            <ul className="list-decimal pl-6">
+              <li>
+                Membangun internal BEM FILKOM UB yang berporos profesionalitas
+                berlandaskan kekeluargaan
+              </li>
+              <li>
+                Mewujudkan pelayanan advokasi yang responsif dan kredibel demi
+                kesejahteraan mahasiswa
+              </li>
+              <li>
+                Menciptakan wadah untuk mahasiswa agar mencapai aktualisasi diri
+                agar terciptanya aksi prestasi
+              </li>
 
-            <li>
-              Menginisiasikan pergerakan mahasiswa yang strategis dan dinamis
-            </li>
-            <li>
-              Mengkolaborasikan seluruh elemen FILKOM UB secara komprehensif{" "}
-            </li>
-          </ul>
+              <li>
+                Menginisiasikan pergerakan mahasiswa yang strategis dan dinamis
+              </li>
+              <li>
+                Mengkolaborasikan seluruh elemen FILKOM UB secara komprehensif{" "}
+              </li>
+            </ul>
+          </Fade>
         </div>
       </div>
       <div className="flex flex-col md:flex-row text-white ">
@@ -96,13 +100,15 @@ const About = () => {
           <h2 className="text-4xl font-marcellus border-b-2 border-white pb-4">
             ARAH GERAK
           </h2>
-          <ul className="list-decimal ml-6 mt-5 text-2xl font-aeonik space-y-4">
-            <li>Internal Progan (Profesionalitas Kekeluargaan)</li>
-            <li>Pelayanan Redibel (Responsif Kredibel)</li>
-            <li>Wadah Aktualitasi (Aktualisasi Prestasi)</li>
-            <li>Gerak Stratemis (Strategis Dinamis)</li>
-            <li>Kolaborasi Horitikal (Horizontal Vertikal)</li>
-          </ul>
+          <Fade cascade bottom>
+            <ul className="list-decimal ml-6 mt-5 text-2xl font-aeonik space-y-4">
+              <li>Internal Progan (Profesionalitas Kekeluargaan)</li>
+              <li>Pelayanan Redibel (Responsif Kredibel)</li>
+              <li>Wadah Aktualitasi (Aktualisasi Prestasi)</li>
+              <li>Gerak Stratemis (Strategis Dinamis)</li>
+              <li>Kolaborasi Horitikal (Horizontal Vertikal)</li>
+            </ul>
+          </Fade>
         </div>
         <div className="w-full md:w-1/2 bg-yellow px-8 py-16 flex flex-col">
           <h2 className="text-4xl font-marcellus text-purple border-b-2 border-purple pb-4 text-right">

@@ -5,7 +5,7 @@ import Underline from "../components/Underline";
 import { HashLink } from "react-router-hash-link";
 import Container from "../components/Container";
 import PartnershipCarousel from "../components/PartnershipCarousel";
-import { Fade } from "react-reveal";
+import { Fade, Slide } from "react-reveal";
 const Home = () => {
   const variants = {
     up: {
@@ -39,14 +39,11 @@ const Home = () => {
           backgroundPosition: "center",
         }}
       >
-        <Fade bottom >
+        <Fade bottom>
           <div className="flex flex-col gap-4 md:gap-2 font-marcellus">
-            <motion.h1
-              className="text-4xl md:text-5xl text-center"
-              transition={{ duration: 2 }}
-            >
+            <h1 className="text-4xl md:text-5xl text-center">
               BEM FILKOM UB 2021
-            </motion.h1>
+            </h1>
             <h3 className="text-2xl md:text-3xl text-center">
               -Kabinet Mozaik Asa-
             </h3>
@@ -65,49 +62,44 @@ const Home = () => {
         </div>
       </div>
       <div id="sambutan" className="overflow-x-hidden">
-        <div className="px-12 md:px-24 py-16 md:py-20 bg-green-500 flex flex-col space-y-6 md:space-y-0 md:flex-row md:space-x-12">
-          <Container
-            hidden={{ x: "-100%", opacity: 0 }}
-            visible={{ x: "0", opacity: 1 }}
-            className="flex flex-col justify-center space-y-4 w-full md:w-3/12"
-          >
-            <h3 className="text-yellow text-2xl font-semibold">
-              Sambutan Hangat
-            </h3>
-            <p className="text-white text-3xl">Presiden dan Wakil Presiden</p>
-          </Container>
-          <Container
-            className="flex-none  w-full md:w-4/12 flex items-center justify-center"
-            hidden={{ opacity: 0 }}
-            visible={{ opacity: 1 }}
-          >
-            <img
-              src="https://paulsexcavations.com.au/wp-content/uploads/2017/11/dummy-image-1-300x298.jpg"
-              className="w-10/12 md:w-11/12"
-              alt="Presiden BEM"
-            />
-          </Container>
-          <Container
-            hidden={{ x: "100%", opacity: 0 }}
-            visible={{ x: "0", opacity: 1 }}
-            className="text-white font-aeonik text-md flex-auto text-justify w-full md:w-5/12 flex flex-col justify-around space-y-4 md:space-y-2"
-          >
-            <p className="text-yellow font-semibold">
-              Assalamu alaikum wr wb. Shalom. Om Swastyastu. Namo Buddhaya
-              Rahayu.
-            </p>
-            <p>
-              Salam hangat dari kita yang terpisah jarak kebersamaan. Di era
-              ini, dihadapi dengan kehidupan normal yang baru, ,membuat adaptasi
-              menjadi langkah terbaik menyambung asa. Namun, yakinlah bahwa
-              melangkah bersama dalam sekat ruang yang ada, menjadikan yang
-              sempit meluas, gelap menerang dan dangkal mendalam menciptakan
-              mozaik dan merangkai asa tak terbatas dari kehidupan.
-            </p>
-            <p className="text-yellow font-semibold">
-              BEM FILKOM 2021 - RANGKAI ASA BERSAMA!
-            </p>
-          </Container>
+        <div className="px-12 md:px-24 py-16 md:py-20 bg-purple flex flex-col space-y-6 md:space-y-0 md:flex-row md:space-x-12">
+          <Slide left>
+            <div className="flex flex-col justify-center space-y-4 w-full md:w-3/12">
+              <h3 className="text-yellow text-2xl font-semibold">
+                Sambutan Hangat
+              </h3>
+              <p className="text-white text-3xl">Presiden dan Wakil Presiden</p>
+            </div>
+          </Slide>
+          <div className="flex-none  w-full md:w-4/12 flex items-center justify-center">
+            <Fade>
+              <img
+                src="https://paulsexcavations.com.au/wp-content/uploads/2017/11/dummy-image-1-300x298.jpg"
+                className="w-10/12 md:w-11/12"
+                alt="Presiden BEM"
+              />
+            </Fade>
+          </div>
+          <Slide right>
+            <div className="text-white font-aeonik text-md flex-auto text-justify w-full md:w-5/12 flex flex-col justify-around space-y-4 md:space-y-2">
+              <p className="text-yellow font-semibold">
+                Assalamu alaikum wr wb. Shalom. Om Swastyastu. Namo Buddhaya
+                Rahayu.
+              </p>
+              <p>
+                Salam hangat dari kita yang terpisah jarak kebersamaan. Di era
+                ini, dihadapi dengan kehidupan normal yang baru, ,membuat
+                adaptasi menjadi langkah terbaik menyambung asa. Namun, yakinlah
+                bahwa melangkah bersama dalam sekat ruang yang ada, menjadikan
+                yang sempit meluas, gelap menerang dan dangkal mendalam
+                menciptakan mozaik dan merangkai asa tak terbatas dari
+                kehidupan.
+              </p>
+              <p className="text-yellow font-semibold">
+                BEM FILKOM 2021 - RANGKAI ASA BERSAMA!
+              </p>
+            </div>
+          </Slide>
         </div>
       </div>
       <div className="px-12 md:px-24 py-16">
@@ -115,14 +107,7 @@ const Home = () => {
           ARTIKEL
         </h2>
         <Underline />
-        <Container
-          hidden={{ opacity: 0 }}
-          visible={{
-            opacity: 1,
-            transition: { staggerChildren: 0.4, when: "beforeChildren" },
-          }}
-          className="flex flex-row flex-wrap mt-4 "
-        >
+        <div className="flex flex-row flex-wrap mt-4 ">
           <ArticleCard
             image="https://dummyimage.com/wsxga"
             description="only five centuries, but also the leap into electronic typesetting,
@@ -150,7 +135,8 @@ const Home = () => {
             PageMaker including versions of Lorem Ipsum industry. Lorem Ipsum
             has been the industry's standard dummy text ever"
           />
-        </Container>
+        </div>
+
         <div className="flex mt-8">
           <a
             href="https://www.instagram.com"

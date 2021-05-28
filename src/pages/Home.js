@@ -3,7 +3,6 @@ import ArticleCard from "../components/ArticleCard";
 import { motion } from "framer-motion";
 import Underline from "../components/Underline";
 import { HashLink } from "react-router-hash-link";
-import Container from "../components/Container";
 import PartnershipCarousel from "../components/PartnershipCarousel";
 import { Fade, Slide } from "react-reveal";
 const Home = () => {

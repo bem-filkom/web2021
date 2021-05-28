@@ -42,6 +42,18 @@
 }
 
 
+@media screen and (max-width: 1024px) {
+  .ribbon-wrapper::after,
+  .ribbon-wrapper::before {
+    display: none;
+  }
+
+  .ribbon::after,
+  .ribbon::before {
+   display: none;
+  }
+}
+/* 
 @media screen and (max-width: 768px) {
   .ribbon-wrapper::after,
   .ribbon-wrapper::before {
@@ -69,4 +81,4 @@
   .ribbon::before {
     border-width: 2rem 0rem 0rem 2rem;
   }
-}
+} */

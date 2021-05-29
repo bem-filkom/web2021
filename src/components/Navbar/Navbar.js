@@ -39,8 +39,8 @@ const Navbar = () => {
           home ? "fixed" : "sticky bg-purple"
         } w-full top-0 font-aeonik text-white z-20 hidden md:flex`}
       >
-        <NavLogo />
-        <NavList />
+        <NavLogo isOpen={isOpen} setIsOpen={setIsOpen} />
+        <NavList isOpen={isOpen} setIsOpen={setIsOpen} />
       </motion.div>
       <div
         className={`flex flex-col top-0 w-full ${

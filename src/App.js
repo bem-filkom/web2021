@@ -7,7 +7,7 @@ import About from "./pages/About";
 import Cabinet from "./pages/Cabinet";
 import Home from "./pages/Home";
 import { AnimatePresence } from "framer-motion";
-import Calendar from "./pages/Calendar";
+// import Calendar from "./pages/Calendar";
 import Department from "./pages/Department";
 import NotFound from "./pages/NotFound";
 

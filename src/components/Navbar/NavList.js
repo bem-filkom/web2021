@@ -23,7 +23,7 @@ const NavList = ({ isOpen, setIsOpen }) => {
     w-auto relative flex-row ml-auto"
       >
         {NAVBAR_ITEMS.map((item, idx) => (
-          <NavItem key={idx} name={item.name} pathname={item.pathname} />
+          <NavItem key={idx} name={item.name} pathname={item.pathname}  isOpen = {isOpen} setIsOpen = {setIsOpen}/>
         ))}
       </motion.div>
       <motion.div

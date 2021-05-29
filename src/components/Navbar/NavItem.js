@@ -1,47 +1,35 @@
 import React, { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { departments } from "../../utils/data";
+import KeyboardArrowDownRoundedIcon from "@material-ui/icons/KeyboardArrowDownRounded";
 
 const NavItem = ({ name, pathname, isOpen, setIsOpen }) => {
-  const [dropdown, setDropdown] = useState(true);
+  const [dropdown, setDropdown] = useState(false);
 
   if (name === "Kabinet") {
     return (
       <div
-        className="relative"
-        onMouseEnter={() => setDropdown(true)}
-        onMouseLeave={() => setDropdown(false)}
+        className="relative cursor-pointer"
+        onClick={() => setDropdown(!dropdown)}
       >
-        <NavLink
-          activeClassName="active"
-          to={pathname}
-          className="px-6 py-6 text-white text-xl relative hidden md:block"
-          onClick={() => setDropdown(false)}
-        >
-          {name}
-        </NavLink>
+        <div className="px-8 md:px-6 py-6 text-white text-xl relative flex items-center ">
+          {name} <KeyboardArrowDownRoundedIcon />
+        </div>
         {dropdown && (
-          <dl className="absolute bg-purple w-full">
+          <dl className="relative md:absolute bg-purple w-full">
             {departments.map((department) => (
               <dd
                 key={department.id}
-                className="my-2 uppercase cursor-pointer hover:bg-yellow flex"
+                className="mb-3 uppercase cursor-pointer hover:bg-yellow flex text-left px-8 font-aeonik text-orange-light"
                 onClick={() => setDropdown(false)}
               >
-                <Link to={`/kabinet/${department.id}`} className='w-full'>{department.id}</Link>
+                <Link to={`/kabinet/${department.id}`} className="w-full">
+                  {department.id}
+                </Link>
               </dd>
             ))}
           </dl>
         )}
-        <NavLink
-          exact
-          activeClassName="active"
-          to={pathname}
-          onClick={() => setIsOpen(!isOpen)}
-          className="px-6 py-6 text-white text-xl relative md:hidden"
-        >
-          {name}
-        </NavLink>
       </div>
     );
   }
@@ -52,16 +40,8 @@ const NavItem = ({ name, pathname, isOpen, setIsOpen }) => {
         exact
         activeClassName="active"
         to={pathname}
-        className="px-6 py-6 text-white text-xl relative hidden md:block"
-      >
-        {name}
-      </NavLink>
-      <NavLink
-        exact
-        activeClassName="active"
-        to={pathname}
         onClick={() => setIsOpen(!isOpen)}
-        className="px-6 py-6 text-white text-xl relative md:hidden"
+        className="px-8 md:px-6 py-6 text-left text-white text-xl relative"
       >
         {name}
       </NavLink>

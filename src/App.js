@@ -22,7 +22,7 @@ const App = () => {
           <Route path="/tentang" component={About} exact />
           <Route path="/kabinet" component={Cabinet} exact />
           <Route path="/kabinet/:id" component={Department} exact />
-          <Route path="/kalender" component={Calendar} exact />
+          {/* <Route path="/kalender" component={Calendar} exact /> */}
           <Route path="/" component={Home} exact />
           <Route path="*" component={NotFound} />
         </Switch>

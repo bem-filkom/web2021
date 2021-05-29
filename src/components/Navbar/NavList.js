@@ -30,7 +30,7 @@ const NavList = ({ isOpen, setIsOpen }) => {
         initial={{ left: "-100%" }}
         animate={controls}
         transition={{ duration: 0.5, ease: "easeInOut" }}
-        className="flex md:hidden bg-purple w-full text-center justify-around mt-20 absolute flex-col mx-auto nav-list"
+        className="flex md:hidden bg-purple w-full text-center mt-20 absolute flex-col mx-auto"
       >
         {NAVBAR_ITEMS.map((item, idx) => (
           <NavItem key={idx} name={item.name} pathname={item.pathname} isOpen = {isOpen} setIsOpen = {setIsOpen}/>

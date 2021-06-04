@@ -40,7 +40,7 @@ const NavItem = ({ name, pathname, isOpen, setIsOpen }) => {
           {departments.map((department) => (
             <dd
               key={department.id}
-              className="py-2 uppercase cursor-pointer hover:bg-yellow flex h-auto text-center font-aeonik text-orange-light text-sm"
+              className="px-8 md:px-0 py-2 uppercase cursor-pointer hover:bg-yellow flex h-auto text-left md:text-center font-aeonik text-orange-light text-sm"
               onClick={() => {
                 setDropdown(false);
                 setIsOpen(!isOpen);

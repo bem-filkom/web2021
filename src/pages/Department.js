@@ -23,13 +23,16 @@ const Department = ({ history }) => {
 
   return (
     <motion.div
-      className="bg-gray"
+      className="bg-gray pb-8"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.3 }}
     >
-      <Ribbon primaryTitle={department.type} secondaryTitle={department.name} />
+      <Ribbon
+        primaryTitle={department.title}
+        secondaryTitle={department.type}
+      />
       <div className="max-w-5xl px-12 md:px-24 mx-auto pt-12">
         <div>
           <img
@@ -38,54 +41,49 @@ const Department = ({ history }) => {
             className="mx-auto"
           />
         </div>
-        <div className="flex flex-row flex-wrap justify-around py-4 gap-x-2 gap-y-4">
-          <Profile name="Salsabila Nur M." role="STAF" />
-          <Profile name="Salsabila Nur M." role="STAF" />
-          <Profile name="Salsabila Nur M." role="STAF" />
+        {department.core && (
+          <div
+            className={`grid grid-cols-${department.core.length} py-4 gap-x-2 gap-y-4`}
+          >
+            {department.core.map((person, idx) => (
+              <Profile name={person.name} role={person.role} key={idx} />
+            ))}
+          </div>
+        )}
+      </div>
+      {department.staff && (
+        <div className="flex flex-row flex-wrap justify-around px-12 md:px-24 max-w-6xl py-12 mx-auto">
+          {department.staff.map((staff) => (
+            <PersonCard
+              photo={"/assets/pictures/rectangle.png"}
+              name="Salsabila Nur M."
+              role="STAF"
+            />
+          ))}
         </div>
-      </div>
-      <div className="flex flex-row flex-wrap justify-around px-12 md:px-24 max-w-6xl py-12 mx-auto">
-        <PersonCard
-          photo={"/assets/pictures/rectangle.png"}
-          name="Salsabila Nur M."
-          role="STAF"
-        />
-        <PersonCard
-          photo={"/assets/pictures/rectangle.png"}
-          name="Salsabila Nur M."
-          role="STAF"
-        />
-        <PersonCard
-          photo={"/assets/pictures/rectangle.png"}
-          name="Salsabila Nur M."
-          role="STAF"
-        />
-      </div>
+      )}
       <div className="py-8 md:py-12 px-8 md:px-24">
         <h2 className="text-purple text-center text-5xl font-marcellus">
           Tupoksi
         </h2>
         <Underline />
-        <div className="max-w-5xl mx-auto bg-yellow-light rounded-xl mt-8 shadow-lg text-xl px-4 md:px-8 py-4">
-          orem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s, when an unknown printer took a galley of type and
-          scrambled it to make a type specimen book
+        <div className="max-w-5xl mx-auto bg-yellow-light rounded-xl mt-8 shadow-lg text-xl px-4 md:px-8 py-4 text-justify">
+          {department.task}
         </div>
       </div>
-      <div className="py-12">
-        <h2 className="text-purple text-center text-5xl font-marcellus">
-          Program Kerja
-        </h2>
-        <Underline />
-        <div className="max-w-4xl mx-auto rounded-xl mt-4 text-xl px-8 py-4 justify-around flex flex-row flex-wrap">
-          <Program name="PK2Maba" />
-          <Program name="Web BEM FILKOM" />
-          <Program name="Web BEM FILKOM" />
-          <Program name="Web BEM FILKOM" />
-          <Program name="Web BEM FILKOM" />
+      {department.programs && (
+        <div className="py-12">
+          <h2 className="text-purple text-center text-5xl font-marcellus">
+            Program Kerja
+          </h2>
+          <Underline />
+          <div className="max-w-5xl mx-auto rounded-xl mt-4 text-xl px-8 py-4 justify-between flex flex-row flex-wrap">
+            {department.programs.map((program, idx) => (
+              <Program name={program} key={idx} />
+            ))}
+          </div>
         </div>
-      </div>
+      )}
     </motion.div>
   );
 };

@@ -8,13 +8,12 @@ const NavItem = ({ name, pathname, isOpen, setIsOpen }) => {
   const [dropdown, setDropdown] = useState(false);
   const dropdownVariants = {
     hidden: {
-      // display: "none",
-      overflow: 'hidden',
+      overflowY: 'hidden',
       maxHeight: 0,
     },
     visible: {
-      maxHeight: 100,
-      // display: "block",
+      maxHeight: 200,
+      overflowY: 'scroll'
     },
   };
 
@@ -41,7 +40,7 @@ const NavItem = ({ name, pathname, isOpen, setIsOpen }) => {
           {departments.map((department) => (
             <dd
               key={department.id}
-              className="my-3 uppercase cursor-pointer hover:bg-yellow flex text-left px-8 font-aeonik text-orange-light"
+              className="py-2 uppercase cursor-pointer hover:bg-yellow flex h-auto text-center font-aeonik text-orange-light text-sm"
               onClick={() => {
                 setDropdown(false);
                 setIsOpen(!isOpen);

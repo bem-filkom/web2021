@@ -33,9 +33,8 @@ const PartnershipCarousel = () => {
     <div className="px-12 md:px-24">
       <Slider {...settings}>
         {partnerships.map((partnership, idx) => (
-          <div>
+          <div key={idx}>
             <img
-              key={idx}
               src={`/assets/partnership/${partnership}.png`}
               alt="partnership"
               className="m-auto py-8 w-56"

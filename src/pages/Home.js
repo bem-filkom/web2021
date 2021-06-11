@@ -22,15 +22,14 @@ const Home = () => {
     },
   };
 
-  const fetchIGPosts = async () => {
-    const res = await fetch("https://bemfilkom-rest.vercel.app/web/ig");
-    const { data } = await res.json();
-    setPosts(data.posts.slice(0, 3));
-  };
-
   useEffect(() => {
+    const fetchIGPosts = async () => {
+      const res = await fetch("https://bemfilkom-rest.vercel.app/web/ig");
+      const { data } = await res.json();
+      setPosts(data.posts.slice(0, 3));
+    };
     fetchIGPosts();
-  }, [posts]);
+  });
 
   return (
     <motion.div

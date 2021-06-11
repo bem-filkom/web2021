@@ -68,7 +68,15 @@ body {
     color: #dc9e25;
   }
 
+  .active{
+    color :#dc9e25;
+  }
+
   .active::after {
     display: none;
   }
+}
+
+.slick-slide{
+  margin: auto;
 }

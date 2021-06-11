@@ -40,7 +40,7 @@ const NavItem = ({ name, pathname, isOpen, setIsOpen }) => {
           {departments.map((department) => (
             <dd
               key={department.id}
-              className="px-8 md:px-0 py-2 uppercase cursor-pointer hover:bg-yellow flex h-auto text-left md:text-center font-aeonik text-orange-light text-sm"
+              className="uppercase cursor-pointer hover:bg-yellow flex h-auto text-left md:text-center font-aeonik text-orange-light text-sm"
               onClick={() => {
                 setDropdown(false);
                 setIsOpen(!isOpen);
@@ -50,7 +50,7 @@ const NavItem = ({ name, pathname, isOpen, setIsOpen }) => {
                 exact
                 activeClassName="active-dropdown-item"
                 to={`/kabinet/${department.id}`}
-                className="w-full text-white"
+                className="w-full text-white px-8 md:px-0 py-2"
               >
                 {department.id}
               </NavLink>

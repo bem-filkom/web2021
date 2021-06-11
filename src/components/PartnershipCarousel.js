@@ -1,16 +1,15 @@
 import React from "react";
 import Slider from "react-slick";
+import { partnerships } from "../utils/constants";
 
 const PartnershipCarousel = () => {
   const settings = {
     dots: true,
     infinite: true,
-    slidesToShow: 2,
+    slidesToShow: 3,
     slidesToScroll: 1,
-    autoplay: true,
-    speed: 2000,
-    autoplaySpeed: 2000,
-    cssEase: "linear",
+    speed: 500,
+    cssEase: "ease",
     responsive: [
       {
         breakpoint: 1204,
@@ -31,14 +30,18 @@ const PartnershipCarousel = () => {
   };
 
   return (
-    <div className='px-12 md:px-24'>
+    <div className="px-12 md:px-24">
       <Slider {...settings}>
-        <div>
-          <img src="/assets/partnership/dqlab.png"  alt ='partnership' className="mx-auto py-8" />
-        </div>
-        <div>
-          <img src="/assets/partnership/teknologi-id.png"  alt ='partnership' className="mx-auto py-8" />
-        </div>
+        {partnerships.map((partnership, idx) => (
+          <div>
+            <img
+              key={idx}
+              src={`/assets/partnership/${partnership}.png`}
+              alt="partnership"
+              className="m-auto py-8 w-56"
+            />
+          </div>
+        ))}
       </Slider>
     </div>
   );

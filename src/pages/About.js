@@ -38,10 +38,14 @@ const About = () => {
               />
             </div>
             <div className="flex-auto text-xl lg:text-2xl text-justify text-purple my-auto">
-              Badan Eksekutif Mahasiswa Fakultas Ilmu Komputer Universitas
-              Brawijaya (BEM FILKOM UB) merupakan bla bla bla aaaaaaaa
-              aaaaaaaaaaaaa aaaaaaaa aaaaaaaaaa aaaaaaaaaaa aaa aaaaaa aaaaaaaaa
-              aaaa aaaa aaaaa aaaaa
+              BEM FILKOM UB merupakan badan eksekutif yang memiliki 4 fungsi
+              utama dalam membantu mahasiswa FILKOM UB berproses, diantaranya
+              ialah Pelayanan khususnya dibidang Advokasi dan Kesejahteraan
+              Mahasiswa, Pengembangan khususnya dalam mengembangkan soft skill
+              serta minat bakat Mahasiswa, Pengabdian dalam mengamalkan salah
+              satu Tri Dharma Perguruan Tinggi, dan Pergerakan yang mewadahi
+              mahasiswa untuk bertindak sebagai inisiator dalam mengawal isu
+              yang beredar.
             </div>
           </div>
         </div>

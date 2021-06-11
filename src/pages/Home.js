@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import ArticleCard from "../components/ArticleCard";
 import { motion } from "framer-motion";
 import Underline from "../components/Underline";
@@ -6,6 +6,8 @@ import { HashLink } from "react-router-hash-link";
 import PartnershipCarousel from "../components/PartnershipCarousel";
 import { Fade, Slide } from "react-reveal";
 const Home = () => {
+  const [posts, setPosts] = useState([]);
+
   const variants = {
     up: {
       y: 0,
@@ -19,6 +21,16 @@ const Home = () => {
       },
     },
   };
+
+  const fetchIGPosts = async () => {
+    const res = await fetch("https://bemfilkom-rest.vercel.app/web/ig");
+    const { data } = await res.json();
+    setPosts(data.posts.slice(0, 3));
+  };
+
+  useEffect(() => {
+    fetchIGPosts();
+  }, [posts]);
 
   return (
     <motion.div
@@ -107,38 +119,18 @@ const Home = () => {
         </h2>
         <Underline />
         <div className="flex flex-row flex-wrap mt-4 ">
-          <ArticleCard
-            image="https://dummyimage.com/wsxga"
-            description="only five centuries, but also the leap into electronic typesetting,
-            remaining essentially unchanged. It was popularised in the 1960s
-            with the release of Letraset sheets containing Lorem Ipsum passages,
-            and more recently with desktop publishing software like Aldus
-            PageMaker including versions of Lorem Ipsum industry. Lorem Ipsum
-            has been the industry's standard dummy text ever"
-          />
-          <ArticleCard
-            image="https://dummyimage.com/wsxga"
-            description="only five centuries, but also the leap into electronic typesetting,
-            remaining essentially unchanged. It was popularised in the 1960s
-            with the release of Letraset sheets containing Lorem Ipsum passages,
-            and more recently with desktop publishing software like Aldus
-            PageMaker including versions of Lorem Ipsum industry. Lorem Ipsum
-            has been the industry's standard dummy text ever"
-          />
-          <ArticleCard
-            image="https://dummyimage.com/wsxga"
-            description="only five centuries, but also the leap into electronic typesetting,
-            remaining essentially unchanged. It was popularised in the 1960s
-            with the release of Letraset sheets containing Lorem Ipsum passages,
-            and more recently with desktop publishing software like Aldus
-            PageMaker including versions of Lorem Ipsum industry. Lorem Ipsum
-            has been the industry's standard dummy text ever"
-          />
+          {posts.map((post, idx) => (
+            <ArticleCard
+              key={idx}
+              image={post.thumbnail}
+              description={post.caption}
+            />
+          ))}
         </div>
 
         <div className="flex mt-8">
           <a
-            href="https://www.instagram.com"
+            href="https://www.instagram.com/bemfilkomub/"
             target="blank"
             className="px-8 py-2 text-lg font-marcellus rounded-full font-semibold bg-yellow-light border-2 border-black mx-auto"
           >

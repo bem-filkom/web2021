@@ -37,7 +37,7 @@ const About = () => {
                 className="w-full md:w-60 lg:w-80"
               />
             </div>
-            <div className="flex-auto text-xl lg:text-2xl text-justify text-purple my-auto">
+            <div className="flex-auto text-xl  text-justify text-purple my-auto">
               BEM FILKOM UB merupakan badan eksekutif yang memiliki 4 fungsi
               utama dalam membantu mahasiswa FILKOM UB berproses, diantaranya
               ialah Pelayanan khususnya dibidang Advokasi dan Kesejahteraan
@@ -60,7 +60,7 @@ const About = () => {
           alt="ornament"
         />
       </div>
-      <div className="mt-20 px-12 md:px-24 py-12 text-purple bg-yellow">
+      <div className="mt-20 px-10 md:px-24 py-12 text-purple bg-yellow">
         <h2 className="text-4xl text-right font-marcellus border-b-2 border-purple pb-4">
           VISI
         </h2>
@@ -69,7 +69,7 @@ const About = () => {
           aksi untuk FILKOM, Brawijaya, dan Indonesia
         </p>
       </div>
-      <div className="px-12 md:px-24 py-12 text-purple bg-gray">
+      <div className="px-10 md:px-24 py-12 text-purple bg-gray">
         <h2 className="text-4xl font-marcellus border-b-2 border-purple pb-4">
           MISI
         </h2>

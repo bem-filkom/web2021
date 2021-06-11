@@ -33,7 +33,7 @@ const Department = ({ history }) => {
         primaryTitle={department.title}
         secondaryTitle={department.type}
       />
-      <div className="max-w-5xl px-12 md:px-24 mx-auto pt-12">
+      <div className="max-w-5xl px-10 md:px-24 mx-auto pt-12">
         <div>
           <img
             src="/assets/pictures/wide-rectangle.jpg"
@@ -43,7 +43,7 @@ const Department = ({ history }) => {
         </div>
         {department.core && (
           <div
-            className={`grid grid-cols-${department.core.length} py-4 gap-x-2 gap-y-4`}
+            className={`flex flex-wrap md:grid md:grid-cols-${department.core.length} py-4 gap-x-4 gap-y-6 md:gap-y-4`}
           >
             {department.core.map((person, idx) => (
               <Profile name={person.name} role={person.role} key={idx} />
@@ -52,7 +52,7 @@ const Department = ({ history }) => {
         )}
       </div>
       {department.staff && (
-        <div className="flex flex-row flex-wrap justify-around px-12 md:px-24 max-w-6xl py-12 mx-auto">
+        <div className="flex flex-row flex-wrap justify-around px-10 md:px-24 max-w-6xl py-12 mx-auto">
           {department.staff.map((staff) => (
             <PersonCard
               photo={"/assets/pictures/rectangle.png"}

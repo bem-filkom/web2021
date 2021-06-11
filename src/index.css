@@ -86,6 +86,10 @@ body {
   }
 }
 
+.slick-track {
+  display: flex;
+}
+
 .slick-slide {
   margin: auto;
 }

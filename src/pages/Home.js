@@ -73,7 +73,7 @@ const Home = () => {
         </div>
       </div>
       <div id="sambutan" className="overflow-x-hidden">
-        <div className="px-12 md:px-24 py-16 md:py-20 bg-purple flex flex-col space-y-6 md:space-y-0 md:flex-row md:space-x-12">
+        <div className="px-10 md:px-24 py-16 md:py-20 bg-purple flex flex-col space-y-6 md:space-y-0 md:flex-row md:space-x-12">
           <Slide left>
             <div className="flex flex-col justify-center space-y-4 w-full md:w-3/12">
               <h3 className="text-yellow text-2xl font-semibold">
@@ -113,7 +113,7 @@ const Home = () => {
           </Slide>
         </div>
       </div>
-      <div className="px-12 md:px-24 py-16">
+      <div className="px-10 md:px-24 py-16">
         <h2 className="text-purple text-center font-marcellus text-4xl font-bold">
           ARTIKEL
         </h2>

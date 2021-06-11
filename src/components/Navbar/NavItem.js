@@ -8,12 +8,12 @@ const NavItem = ({ name, pathname, isOpen, setIsOpen }) => {
   const [dropdown, setDropdown] = useState(false);
   const dropdownVariants = {
     hidden: {
-      overflowY: 'hidden',
+      overflowY: "hidden",
       maxHeight: 0,
     },
     visible: {
       maxHeight: 200,
-      overflowY: 'scroll'
+      overflowY: "scroll",
     },
   };
 
@@ -35,7 +35,7 @@ const NavItem = ({ name, pathname, isOpen, setIsOpen }) => {
           animate={dropdown ? "visible" : "hidden"}
           transition={{ stiffness: 0 }}
           variants={dropdownVariants}
-          className="relative md:absolute bg-purple w-full"
+          className="relative md:absolute bg-purple w-full dropdown"
         >
           {departments.map((department) => (
             <dd

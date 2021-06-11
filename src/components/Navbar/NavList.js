@@ -20,20 +20,32 @@ const NavList = ({ isOpen, setIsOpen }) => {
     <>
       <motion.div
         className="hidden md:flex text-center justify-around
-    w-auto relative flex-row ml-auto"
+    w-auto relative flex-row ml-auto "
       >
         {NAVBAR_ITEMS.map((item, idx) => (
-          <NavItem key={idx} name={item.name} pathname={item.pathname}  isOpen = {isOpen} setIsOpen = {setIsOpen}/>
+          <NavItem
+            key={idx}
+            name={item.name}
+            pathname={item.pathname}
+            isOpen={isOpen}
+            setIsOpen={setIsOpen}
+          />
         ))}
       </motion.div>
       <motion.div
         initial={{ left: "-100%" }}
         animate={controls}
         transition={{ duration: 0.5, ease: "easeInOut" }}
-        className="flex md:hidden bg-purple w-full text-center mt-20 absolute flex-col mx-auto"
+        className="flex md:hidden bg-purple w-full text-center mt-20 absolute flex-col mx-auto py-4 "
       >
         {NAVBAR_ITEMS.map((item, idx) => (
-          <NavItem key={idx} name={item.name} pathname={item.pathname} isOpen = {isOpen} setIsOpen = {setIsOpen}/>
+          <NavItem
+            key={idx}
+            name={item.name}
+            pathname={item.pathname}
+            isOpen={isOpen}
+            setIsOpen={setIsOpen}
+          />
         ))}
       </motion.div>
     </>

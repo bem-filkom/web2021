@@ -22,6 +22,14 @@
   font-family: "Aeonik", serif;
 }
 
+html {
+  scroll-padding-top: 80px;
+}
+
+body {
+  background-color: #e5ddc5;
+}
+
 .active::after {
   content: "";
   position: absolute;
@@ -33,12 +41,13 @@
   background-color: orange;
 }
 
-html {
-  scroll-padding-top: 80px;
+.dropdown::-webkit-scrollbar {
+  background: white;
+  width: 10px;
 }
 
-body {
-  background-color: #e5ddc5;
+.dropdown::-webkit-scrollbar-thumb {
+  background: #e5b350;
 }
 
 .min-h-screen {
@@ -68,8 +77,8 @@ body {
     color: #dc9e25;
   }
 
-  .active{
-    color :#dc9e25;
+  .active {
+    color: #dc9e25;
   }
 
   .active::after {
@@ -77,6 +86,6 @@ body {
   }
 }
 
-.slick-slide{
+.slick-slide {
   margin: auto;
 }

@@ -56,7 +56,7 @@ const Department = ({ history }) => {
           {department.staff.map((staff) => (
             <PersonCard
               photo={"/assets/pictures/rectangle.png"}
-              name="Salsabila Nur M."
+              name={staff.name}
               role="STAF"
             />
           ))}

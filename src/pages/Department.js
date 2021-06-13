@@ -53,8 +53,9 @@ const Department = ({ history }) => {
       </div>
       {department.staff && (
         <div className="flex flex-row flex-wrap justify-around px-10 md:px-24 max-w-6xl py-12 mx-auto">
-          {department.staff.map((staff) => (
+          {department.staff.map((staff, idx) => (
             <PersonCard
+              key={idx}
               photo={"/assets/pictures/rectangle.png"}
               name={staff.name}
               role="STAF"
@@ -72,12 +73,12 @@ const Department = ({ history }) => {
         </div>
       </div>
       {department.programs && (
-        <div className="py-12">
+        <div className="py-12 w-full">
           <h2 className="text-purple text-center text-5xl font-marcellus">
             Program Kerja
           </h2>
           <Underline />
-          <div className="max-w-5xl mx-auto rounded-xl mt-4 text-xl px-8 py-4 justify-between flex flex-row flex-wrap">
+          <div className="max-w-5xl mx-auto rounded-xl mt-4 text-xl px-8 py-4 justify-center items-center content-center flex flex-col md:flex-row">
             {department.programs.map((program, idx) => (
               <Program name={program} key={idx} />
             ))}

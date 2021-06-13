@@ -25,11 +25,15 @@ const Home = () => {
   useEffect(() => {
     const fetchIGPosts = async () => {
       const res = await fetch("https://bemfilkom-rest.vercel.app/web/ig");
-      const { data } = await res.json();
-      setPosts(data.posts.slice(0, 3));
+      let { data } = await res.json();
+      data = data.posts.map((item) => ({
+        ...item,
+        thumbnail: `https://bib.actionsack.com/imageproxy?url=${encodeURIComponent(item.thumbnail)}`,
+      }))
+      setPosts(data.slice(0, 6));
     };
     fetchIGPosts();
-  });
+  }, []);
 
   return (
     <motion.div
@@ -43,7 +47,7 @@ const Home = () => {
         className="min-h-screen flex justify-center items-center text-white relative"
         style={{
           backgroundImage:
-            "linear-gradient(to right, rgba(71, 30, 60, 0.72),rgba(71, 30, 60, 0.72)),url('/assets/backgrounds/filkom.jpg')",
+            "linear-gradient(to right, rgba(71, 30, 60, 0.85),rgba(71, 30, 60, 0.76)),url('/assets/backgrounds/filkom.jpg')",
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
           backgroundPosition: "center",
@@ -51,11 +55,11 @@ const Home = () => {
       >
         <Fade bottom>
           <div className="flex flex-col gap-4 md:gap-2 font-marcellus">
-            <h1 className="text-4xl md:text-5xl text-center">
-              BEM FILKOM UB 2021
+            <h1 className="text-5xl md:text-7xl text-center">
+              <span className="text-yellow">BEM FILKOM</span> 2021
             </h1>
-            <h3 className="text-2xl md:text-3xl text-center">
-              -Kabinet Mozaik Asa-
+            <h3 className="text-3xl md:text-3xl text-center">
+              — Kabinet Mozaik Asa —
             </h3>
           </div>
         </Fade>
@@ -114,15 +118,14 @@ const Home = () => {
       </div>
       <div className="px-10 md:px-24 py-16">
         <h2 className="text-purple text-center font-marcellus text-4xl font-bold">
-          ARTIKEL
+          KABAR TERBARU
         </h2>
         <Underline />
         <div className="flex flex-row flex-wrap mt-4 ">
           {posts.map((post, idx) => (
             <ArticleCard
               key={idx}
-              image={post.thumbnail}
-              description={post.caption}
+              {...post}
             />
           ))}
         </div>
@@ -133,7 +136,7 @@ const Home = () => {
             target="blank"
             className="px-8 py-2 text-lg font-marcellus rounded-full font-semibold bg-yellow-light border-2 border-black mx-auto"
           >
-            Read More
+            Baca kabar lainnya &rarr;
           </a>
         </div>
       </div>

@@ -43,7 +43,7 @@ const Department = ({ history }) => {
         </div>
         {department.core && (
           <div
-            className={`flex flex-wrap md:grid md:grid-cols-${department.core.length} py-4 gap-x-4 gap-y-6 md:gap-y-4`}
+            className={`flex flex-wrap justify-between py-4 gap-x-4 gap-y-6 md:gap-y-4`}
           >
             {department.core.map((person, idx) => (
               <Profile name={person.name} role={person.role} key={idx} />
@@ -51,24 +51,29 @@ const Department = ({ history }) => {
           </div>
         )}
       </div>
+      
       {department.staff && (
-        <div className="flex flex-row flex-wrap justify-around px-10 md:px-24 max-w-6xl py-12 mx-auto">
-          {department.staff.map((staff, idx) => (
-            <PersonCard
-              key={idx}
-              photo={"/assets/pictures/rectangle.png"}
-              name={staff.name}
-              role="STAF"
+        <div className="max-w-5xl mx-auto pt-12">
+          <h2 className="text-purple text-center text-5xl font-marcellus">
+            Staff
+          </h2>
+          <Underline />
+          <div>
+            <img
+              src={`/assets/kabinet/staff/${id}.png`}
+              alt="STAFF"
+              className="mx-auto"
             />
-          ))}
+          </div>
         </div>
       )}
-      <div className="py-8 md:py-12 px-8 md:px-24">
+      
+      <div className="pb-8 md:py-12 px-8 md:px-24">
         <h2 className="text-purple text-center text-5xl font-marcellus">
           Tupoksi
         </h2>
         <Underline />
-        <div className="max-w-5xl mx-auto bg-yellow-light rounded-xl mt-8 shadow-lg text-xl px-4 md:px-8 py-4 text-justify">
+        <div className="max-w-5xl mx-auto bg-yellow-light rounded-xl mt-8 shadow-lg text-lg font-marcellus px-4 md:px-8 py-4 text-justify">
           {department.task}
         </div>
       </div>
@@ -78,7 +83,7 @@ const Department = ({ history }) => {
             Program Kerja
           </h2>
           <Underline />
-          <div className="max-w-5xl mx-auto rounded-xl mt-4 text-xl px-8 py-4 justify-center items-center content-center flex flex-col md:flex-row">
+          <div className="max-w-5xl mx-auto rounded-xl mt-4 text-xl px-8 py-4 justify-center items-center content-center flex flex-row flex-wrap">
             {department.programs.map((program, idx) => (
               <Program name={program} key={idx} />
             ))}

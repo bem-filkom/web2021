@@ -118,13 +118,11 @@ const About = () => {
           <h2 className="text-4xl font-marcellus text-purple border-b-2 border-purple pb-4 text-right">
             BUDAYA KERJA
           </h2>
-          {/* <ul className="list-decimal ml-8 mt-4 text-2xl font-aeonik space-y-4">
-            <li>Internal Progan (Profesionalitas Kekeluargaan)</li>
-            <li>Pelayanan Redibel (Responsif Kredibel)</li>
-            <li>Wadah Aktualitasi (Aktualisasi Prestasi)</li>
-            <li>Gerak Stratemis (Strategis Dinamis)</li>
-            <li>Kolaborasi Horitikal (Horizontal Vertikal)</li>
-          </ul> */}
+          <ul className="list-decimal text-purple ml-6 mt-5 text-2xl font-aeonik space-y-4">
+            <li>Responsibility</li>
+            <li>4R: <br/> Respect to Time, Respect to People, Respect to System, Respect Yourself</li>
+            <li>Develop and Grow Together</li>
+          </ul>
         </div>
       </div>
       <div className="bg-pink-light flex flex-col justify-center items-center py-20 gap-y-6 text-purple">

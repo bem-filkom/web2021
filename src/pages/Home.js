@@ -47,16 +47,21 @@ const Home = () => {
         className="min-h-screen flex justify-center items-center text-white relative"
         style={{
           backgroundImage:
-            "linear-gradient(to right, rgba(71, 30, 60, 0.85),rgba(71, 30, 60, 0.76)),url('/assets/backgrounds/filkom.jpg')",
+            "linear-gradient(to right, rgba(184, 137, 47, 0.85), rgba(184, 137, 47, 0.65)), url('/assets/backgrounds/filkom.jpg')",
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
       >
         <Fade bottom>
-          <div className="flex flex-col gap-4 md:gap-2 font-marcellus">
+          <div
+            className="flex flex-col gap-4 md:gap-2 font-marcellus"
+            style={{
+              textShadow: " 1px 1px 8px rgb(36 37 47 / 25%)"
+            }}
+          >
             <h1 className="text-5xl md:text-7xl text-center">
-              <span className="text-yellow">BEM FILKOM</span> 2021
+              BEM FILKOM 2021
             </h1>
             <h3 className="text-3xl md:text-3xl text-center">
               — Kabinet Mozaik Asa —
@@ -102,7 +107,7 @@ const Home = () => {
               </p>
               <p>
                 Salam hangat dari kita yang terpisah jarak kebersamaan. Di era
-                ini, dihadapi dengan kehidupan normal yang baru, ,membuat
+                ini, dihadapi dengan kehidupan normal yang baru, membuat
                 adaptasi menjadi langkah terbaik menyambung asa. Namun, yakinlah
                 bahwa melangkah bersama dalam sekat ruang yang ada, menjadikan
                 yang sempit meluas, gelap menerang dan dangkal mendalam

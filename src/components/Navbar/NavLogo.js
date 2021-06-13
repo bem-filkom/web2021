@@ -7,6 +7,9 @@ const Navlogo = ({ isOpen, setIsOpen }) => {
       <Link to="/">
         <img
           src="/assets/pictures/logo-bem-without-text.png"
+          style={{
+            filter: "drop-shadow(0px 0px 3px rgba(255,255,255,0.3)"
+          }}
           alt="logo bem"
           className="w-20"
         />

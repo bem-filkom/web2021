@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import PersonCard from "../components/PersonCard";
 import Profile from "../components/Profile";
 import Program from "../components/Program";
 import Underline from "../components/Underline";

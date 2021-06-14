@@ -118,18 +118,25 @@ const About = () => {
           <h2 className="text-4xl font-marcellus text-purple border-b-2 border-purple pb-4 text-right">
             BUDAYA KERJA
           </h2>
-          <ul className="list-decimal text-purple ml-6 mt-5 text-2xl font-aeonik space-y-4">
-            <li>Responsibility</li>
-            <li>4R: <br/> Respect to Time, Respect to People, Respect to System, Respect Yourself</li>
-            <li>Develop and Grow Together</li>
-          </ul>
+          <Fade cascade bottom>
+            <ul className="list-decimal text-purple ml-6 mt-5 text-2xl font-aeonik space-y-4">
+              <li>Responsibility</li>
+              <li>
+                4R: <br /> Respect to Time, Respect to People, Respect to
+                System, Respect Yourself
+              </li>
+              <li>Develop and Grow Together</li>
+            </ul>
+          </Fade>
         </div>
       </div>
       <div className="bg-pink-light flex flex-col justify-center items-center py-20 gap-y-6 text-purple">
-        <h3 className="italic font-aeonik text-xl md:text-2xl">MOZAIK ASA</h3>
-        <h2 className="font-marcellus text-3xl md:text-4xl text-center">
-          "RANGKAI ASA BERSAMA!"
-        </h2>
+        <Fade bottom>
+          <h3 className="italic font-aeonik text-xl md:text-2xl">MOZAIK ASA</h3>
+          <h2 className="font-marcellus text-3xl md:text-4xl text-center">
+            "RANGKAI ASA BERSAMA!"
+          </h2>
+        </Fade>
       </div>
     </motion.div>
   );

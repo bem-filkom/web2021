@@ -90,10 +90,10 @@ const Home = () => {
               <p className="text-white text-3xl">Presiden dan Wakil Presiden</p>
             </div>
           </Slide>
-          <div className="flex-none  w-full md:w-4/12 flex items-center justify-center">
+          <div className="flex-none w-full md:w-4/12 flex items-center justify-center">
             <Fade>
               <img
-                src="https://paulsexcavations.com.au/wp-content/uploads/2017/11/dummy-image-1-300x298.jpg"
+                src="/assets/kabinet/pres-wapres.jpg"
                 className="w-10/12 md:w-11/12"
                 alt="Presiden BEM"
               />

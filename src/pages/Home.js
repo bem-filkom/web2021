@@ -5,8 +5,17 @@ import Underline from "../components/Underline";
 import { HashLink } from "react-router-hash-link";
 import PartnershipCarousel from "../components/PartnershipCarousel";
 import { Fade, Slide } from "react-reveal";
+import HashLoader from "react-spinners/HashLoader";
+import { css } from "@emotion/react";
+
 const Home = () => {
   const [posts, setPosts] = useState([]);
+  const override = css`
+    position: absolute;
+    left: 50%;
+    bottom: 8rem;
+    transform: translate(-50%, -50%);
+  `;
 
   const variants = {
     up: {
@@ -28,8 +37,10 @@ const Home = () => {
       let { data } = await res.json();
       data = data.posts.map((item) => ({
         ...item,
-        thumbnail: `https://bib.actionsack.com/imageproxy?url=${encodeURIComponent(item.thumbnail)}`,
-      }))
+        thumbnail: `https://bib.actionsack.com/imageproxy?url=${encodeURIComponent(
+          item.thumbnail
+        )}`,
+      }));
       setPosts(data.slice(0, 6));
     };
     fetchIGPosts();
@@ -57,7 +68,7 @@ const Home = () => {
           <div
             className="flex flex-col gap-4 md:gap-2 font-marcellus"
             style={{
-              textShadow: " 1px 1px 8px rgb(36 37 47 / 25%)"
+              textShadow: " 1px 1px 8px rgb(36 37 47 / 25%)",
             }}
           >
             <h1 className="text-5xl md:text-7xl text-center">
@@ -127,12 +138,16 @@ const Home = () => {
         </h2>
         <Underline />
         <div className="flex flex-row flex-wrap mt-4 ">
-          {posts.map((post, idx) => (
-            <ArticleCard
-              key={idx}
-              {...post}
-            />
-          ))}
+          {posts.length !== 0 ? (
+            <div className="relative h-80 w-full">
+              <HashLoader color="#471F3C" loading={true} css={override} />
+              <div className="text-xl text-purple text-center mb-2 absolute bottom-20 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                Loading...
+              </div>
+            </div>
+          ) : (
+            posts.map((post, idx) => <ArticleCard key={idx} {...post} />)
+          )}
         </div>
 
         <div className="flex mt-8">

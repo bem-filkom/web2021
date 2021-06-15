@@ -17,6 +17,18 @@ const NavItem = ({ name, pathname, isOpen, setIsOpen }) => {
     },
   };
 
+  const chevronVariants = {
+    up: {
+      rotate: 180,
+    },
+    down: {
+      rotate: 0,
+    },
+    transition: {
+      stiffness: 0,
+    },
+  };
+
   if (name === "Kabinet") {
     return (
       <div
@@ -27,7 +39,14 @@ const NavItem = ({ name, pathname, isOpen, setIsOpen }) => {
       >
         <div className="px-8 md:px-6 py-6 text-white text-xl relative flex items-center ">
           {name}&nbsp;
-          <KeyboardArrowDownRoundedIcon />
+          <motion.div
+            initial="down"
+            animate={dropdown ? "up" : "down"}
+            variants={chevronVariants}
+            className='flex'
+          >
+            <KeyboardArrowDownRoundedIcon className='my-auto' />
+          </motion.div>
         </div>
 
         <motion.dl

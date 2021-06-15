@@ -10,6 +10,7 @@ import { css } from "@emotion/react";
 
 const Home = () => {
   const [posts, setPosts] = useState([]);
+  const [loading, setLoading] = useState(false);
   const override = css`
     position: absolute;
     left: 50%;
@@ -33,15 +34,22 @@ const Home = () => {
 
   useEffect(() => {
     const fetchIGPosts = async () => {
-      const res = await fetch("https://bemfilkom-rest.vercel.app/web/ig");
-      let { data } = await res.json();
-      data = data.posts.map((item) => ({
-        ...item,
-        thumbnail: `https://bib.actionsack.com/imageproxy?url=${encodeURIComponent(
-          item.thumbnail
-        )}`,
-      }));
-      setPosts(data.slice(0, 6));
+      try {
+        setLoading(true);
+        const res = await fetch("https://bemfilkom-rest.vercel.app/web/ig");
+        let { data } = await res.json();
+        setLoading(false);
+        data = data.posts.map((item) => ({
+          ...item,
+          thumbnail: `https://bib.actionsack.com/imageproxy?url=${encodeURIComponent(
+            item.thumbnail
+          )}`,
+        }));
+        setPosts(data.slice(0, 6));
+      } catch (err) {
+        setLoading(false);
+        console.log(err);
+      }
     };
     fetchIGPosts();
   }, []);
@@ -138,9 +146,9 @@ const Home = () => {
         </h2>
         <Underline />
         <div className="flex flex-row flex-wrap mt-4 ">
-          {posts.length !== 0 ? (
+          {loading ? (
             <div className="relative h-80 w-full">
-              <HashLoader color="#471F3C" loading={true} css={override} />
+              <HashLoader color="#471F3C" loading={loading} css={override} />
               <div className="text-xl text-purple text-center mb-2 absolute bottom-20 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
                 Loading...
               </div>

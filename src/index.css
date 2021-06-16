@@ -73,18 +73,12 @@ body {
     min-height: calc(var(--vh, 1vh) * 100 - 64px);
   }
 
-  .active-dropdown-item {
-    color: #dc9e25;
-  }
-
   .active {
     color: #dc9e25;
-    background-color: transparent;
   }
 
   .active > * {
-    color: #dc9e25;
-    background-color: transparent;
+    color: #fff;
   }
 
   .active::after {

@@ -42,7 +42,13 @@ const Department = ({ history }) => {
         </div>
         {department.core && (
           <div
-            className={`flex flex-wrap justify-between py-4 gap-x-4 gap-y-6 md:gap-y-4`}
+            className={`flex flex-wrap justify-around md:grid md:${
+              department.core.length === 1
+                ? "grid-cols-1"
+                : department.core.length === 2
+                ? "grid-cols-2"
+                : "grid-cols-3"
+            } py-4 gap-x-4 gap-y-6 md:gap-y-4`}
           >
             {department.core.map((person, idx) => (
               <Profile name={person.name} role={person.role} key={idx} />
@@ -50,7 +56,7 @@ const Department = ({ history }) => {
           </div>
         )}
       </div>
-      
+
       {department.staff && (
         <div className="max-w-5xl mx-auto pt-12">
           <h2 className="text-purple text-center text-5xl font-marcellus">
@@ -66,8 +72,8 @@ const Department = ({ history }) => {
           </div>
         </div>
       )}
-      
-      <div className="pb-8 md:py-12 px-8 md:px-24">
+
+      <div className="pb-8 md:py-12 px-8 md:px-24 mt-10 md:mt-0">
         <h2 className="text-purple text-center text-5xl font-marcellus">
           Tupoksi
         </h2>

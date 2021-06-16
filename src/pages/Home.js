@@ -100,47 +100,51 @@ const Home = () => {
         </div>
       </div>
       <div id="sambutan" className="overflow-x-hidden">
-        <div className="px-10 md:px-24 py-16 md:py-20 bg-purple flex flex-col space-y-6 md:space-y-0 md:flex-row md:space-x-12">
-          <Slide left>
-            <div className="flex flex-col justify-center space-y-4 w-full md:w-3/12">
-              <h3 className="text-yellow text-2xl font-semibold">
-                Sambutan Hangat
-              </h3>
-              <p className="text-white text-3xl">Presiden dan Wakil Presiden</p>
+        <div className="bg-purple">
+          <div className="px-10 py-16 md:py-20 flex flex-col space-y-6 md:space-y-0 md:flex-row md:space-x-12 max-w-8xl mx-auto">
+            <Slide left>
+              <div className="flex flex-col justify-center space-y-4 w-full md:w-3/12">
+                <h3 className="text-yellow text-2xl font-semibold">
+                  Sambutan Hangat
+                </h3>
+                <p className="text-white text-3xl">
+                  Presiden dan Wakil Presiden
+                </p>
+              </div>
+            </Slide>
+            <div className="flex-none w-full md:w-4/12 flex items-center justify-center">
+              <Fade>
+                <img
+                  src="/assets/kabinet/pres-wapres.jpg"
+                  className="w-10/12 md:w-11/12"
+                  alt="Presiden BEM"
+                />
+              </Fade>
             </div>
-          </Slide>
-          <div className="flex-none w-full md:w-4/12 flex items-center justify-center">
-            <Fade>
-              <img
-                src="/assets/kabinet/pres-wapres.jpg"
-                className="w-10/12 md:w-11/12"
-                alt="Presiden BEM"
-              />
-            </Fade>
+            <Slide right>
+              <div className="text-white font-aeonik text-md flex-auto text-justify w-full md:w-5/12 flex flex-col justify-around space-y-4 md:space-y-2">
+                <p className="text-yellow font-semibold">
+                  Assalamu alaikum wr wb. Shalom. Om Swastyastu. Namo Buddhaya
+                  Rahayu.
+                </p>
+                <p>
+                  Salam hangat dari kita yang terpisah jarak kebersamaan. Di era
+                  ini, dihadapi dengan kehidupan normal yang baru, membuat
+                  adaptasi menjadi langkah terbaik menyambung asa. Namun,
+                  yakinlah bahwa melangkah bersama dalam sekat ruang yang ada,
+                  menjadikan yang sempit meluas, gelap menerang dan dangkal
+                  mendalam menciptakan mozaik dan merangkai asa tak terbatas
+                  dari kehidupan.
+                </p>
+                <p className="text-yellow font-semibold">
+                  BEM FILKOM 2021 - RANGKAI ASA BERSAMA!
+                </p>
+              </div>
+            </Slide>
           </div>
-          <Slide right>
-            <div className="text-white font-aeonik text-md flex-auto text-justify w-full md:w-5/12 flex flex-col justify-around space-y-4 md:space-y-2">
-              <p className="text-yellow font-semibold">
-                Assalamu alaikum wr wb. Shalom. Om Swastyastu. Namo Buddhaya
-                Rahayu.
-              </p>
-              <p>
-                Salam hangat dari kita yang terpisah jarak kebersamaan. Di era
-                ini, dihadapi dengan kehidupan normal yang baru, membuat
-                adaptasi menjadi langkah terbaik menyambung asa. Namun, yakinlah
-                bahwa melangkah bersama dalam sekat ruang yang ada, menjadikan
-                yang sempit meluas, gelap menerang dan dangkal mendalam
-                menciptakan mozaik dan merangkai asa tak terbatas dari
-                kehidupan.
-              </p>
-              <p className="text-yellow font-semibold">
-                BEM FILKOM 2021 - RANGKAI ASA BERSAMA!
-              </p>
-            </div>
-          </Slide>
         </div>
       </div>
-      <div className="px-10 md:px-24 py-16">
+      <div className="px-10 py-16 max-w-8xl mx-auto">
         <h2 className="text-purple text-center font-marcellus text-4xl font-bold">
           KABAR TERBARU
         </h2>

@@ -41,9 +41,9 @@ export const departments = [
     title: "Menko dan Direktur Internal",
     type: "Pengurus Inti",
     core: [
+      { name: "Dwinanda Romolo", role: "Direktur Internal" },
       { name: "Muhamad Guntur Dermawan Amin", role: "Menko Kepemudaan" },
       { name: "Rahadian Fitra Syakura", role: "Menko Sosial Politik" },
-      { name: "Dwinanda Romolo", role: "Direktur Internal" },
     ],
     task: "Bertugas melakukan monitoring dan evaluasi terhadap program kerja kementrian atau kebiroan BEM FILKOM agar tercapainya keselarasan",
   },
@@ -52,8 +52,8 @@ export const departments = [
     title: "Pengembangan Sumber Daya Manusia",
     type: "Kementerian",
     core: [
-      { name: "Muhammad Syukran Ni’matullah", role: "Menteri PSDM" },
       { name: "Huriyah Anisah Nur Humairoh", role: "Dirjen Kaderisasi" },
+      { name: "Muhammad Syukran Ni’matullah", role: "Menteri PSDM" },
       { name: "Andriko Fajar Prakoso", role: "Dirjen P2M" },
     ],
     task: "Pengembangan Sumber Daya Manusia atau PSDM merupakan kementerian yang mengembangkan potensi serta karakter mahasiswa FILKOM guna memberi bekal kepada Mahasiswa baik pra kuliah, saat kuliah dan pasca kuliah. Selain itu, PSDM juga bertanggung jawab mempersiapkan sumber daya mahasiswa yang potensial menjadi penerus masa depan.",
@@ -81,11 +81,11 @@ export const departments = [
     title: "Perhubungan",
     type: "Kementerian",
     core: [
+      { name: "Fidelis Farren Pradipto", role: "Dirjen Dalam Negeri" },
       {
         name: "Muhammad Hardian Ghaffari Nasution",
         role: "Menteri Perhubungan",
       },
-      { name: "Fidelis Farren Pradipto", role: "Dirjen Dalam Negeri" },
       { name: "Rifki Karim Ramadhan", role: "Dirjen Luar Negeri" },
     ],
     task: "Perhubungan merupakan kementrian yang menghubungkan BEM FILKOM dengan stakeholder yang berada didalam maupun luar lingkup Fakultas. Perhubungan juga menjadi jembatan monitoring, kolaborasi dan konsolidasi antara BEM FILKOM dengan eksternal agar terciptanya kesinergisan irama dan meningkatkan rasa kekeluargaan bagi seluruh elemen kemahasiswaan.",
@@ -119,11 +119,11 @@ export const departments = [
     title: "Karier Minat Bakat",
     type: "Kementerian",
     core: [
+      { name: "Lenny Raufi Syafitri", role: "Dirjen K2P" },
       {
         name: "Reza Syahputra",
-        role: "Menteri Perhubungan",
+        role: "Menteri KMB",
       },
-      { name: "Lenny Raufi Syafitri", role: "Dirjen K2P" },
       { name: "Wisnumurti", role: "Dirjen Ekraf" },
     ],
     task: "Karir & Minat Bakat merupakan kementerian yang bertujuan untuk melakukan pengembangan dan pengawalan Mahasiswa terhadap karir dan juga minat bakat. Dalam mendukung hal tersebut kementrian ini juga melakukan apresiasi terhadap capaian minat bakat dari Mahasiswa.",
@@ -154,12 +154,12 @@ export const departments = [
     title: "Kajian dan Aksi Strategis",
     type: "Kementerian",
     core: [
+      { name: "Muhammad Fadhel Haidar", role: "Dirjen Eksternal" },
       {
         name: "Reza Satya Mahesa",
         role: "Menteri Kastrat",
       },
       { name: "Farid Syauqi", role: "Dirjen Internal" },
-      { name: "Muhammad Fadhel Haidar", role: "Dirjen Eksternal" },
     ],
     task: "Bertanggungjawab dalam mengawal isu-isu strategis dengan melakukan pencerdasan, propaganda, dan pengkajian terhadap isu di ranah universitas, regional, nasional, maupun internasional.",
     programs: ["APANI", "Router", "KPK", "Wani Penat", "Bang Sambat"],
@@ -180,12 +180,12 @@ export const departments = [
     title: "Sosial dan Lingkungan",
     type: "Kementerian",
     core: [
+      { name: "Ghina Zahirah", role: "Dirjen Lingkungan Hidup" },
       {
         name: "Hilmy Saeful Fatah",
         role: "Menteri Sosling",
       },
       { name: "Dandy Ramadhany", role: "Dirjen Sosial Masyarakat" },
-      { name: "Ghina Zahirah", role: "Dirjen Lingkungan Hidup" },
     ],
     task: "Sosial dan Lingkungan bertanggung jawab dibidang Pelayanan Masyarakat serta Lingkungan Hidup dengan melakukan pengembangan melalui program dan aksi nyata yang dapat dilakukan seperti mencerdaskan masyarakat khususnya yang membutuhkan dibidang pendidikan, peduli lingkungan hidup bermasyarakat, aktif dalam bantuan sosial serta pengabdian kepada masyarakat, serta menciptakan kepedulian mahasiswa terhadap masyarakat.",
     programs: [
@@ -212,11 +212,11 @@ export const departments = [
     title: "Advokasi dan Kesejahteraan Mahasiswa",
     type: "Kementerian",
     core: [
+      { name: "Nadya Nur Fadhila", role: "Dirjen Kebijakan Kampus" },
       {
         name: "Chusna Farida Islama",
         role: "Menteri Advokesma",
       },
-      { name: "Nadya Nur Fadhila", role: "Dirjen Kebijakan Kampus" },
       {
         name: "Kautsarratu Athaya Zayyannarantis",
         role: "Dirjen Kesejahteraan Mahasiswa",

@@ -1,12 +1,12 @@
-const defaultTheme = require('tailwindcss/defaultTheme')
+const defaultTheme = require("tailwindcss/defaultTheme");
 
 module.exports = {
   purge: ["./src/**/*.{js,jsx,ts,tsx}", "./public/index.html"],
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
-      spacing:{
-        "88" : "22rem"
+      spacing: {
+        88: "22rem",
       },
       colors: {
         purple: {
@@ -18,7 +18,7 @@ module.exports = {
         },
         orange: {
           DEFAULT: "#DA6D0D",
-          light : '#E5B350'
+          light: "#E5B350",
         },
         pink: {
           DEFAULT: "#F4D1A7",
@@ -28,9 +28,12 @@ module.exports = {
           DEFAULT: "#E5DDC5",
         },
       },
+      maxWidth: {
+        "8xl": "88rem",
+      },
     },
     screens: {
-      'xs': '576px',
+      xs: "576px",
       ...defaultTheme.screens,
     },
   },

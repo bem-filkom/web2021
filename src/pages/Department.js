@@ -44,10 +44,10 @@ const Department = ({ history }) => {
           <div
             className={`flex flex-wrap justify-around md:grid md:${
               department.core.length === 1
-                ? "grid-cols-1"
+                ? "md:grid-cols-1"
                 : department.core.length === 2
-                ? "grid-cols-2"
-                : "grid-cols-3"
+                ? "md:grid-cols-2"
+                : "md:grid-cols-3"
             } py-4 gap-x-4 gap-y-4`}
           >
             {department.core.map((person, idx) => (

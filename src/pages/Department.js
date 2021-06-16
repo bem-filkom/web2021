@@ -42,7 +42,7 @@ const Department = ({ history }) => {
         </div>
         {department.core && (
           <div
-            className={`flex flex-wrap justify-around md:grid md:${
+            className={`flex flex-wrap justify-around md:grid ${
               department.core.length === 1
                 ? "md:grid-cols-1"
                 : department.core.length === 2

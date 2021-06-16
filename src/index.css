@@ -50,6 +50,10 @@ body {
   background: #e5b350;
 }
 
+.active-dropdown-item {
+  background-color: #dc9e25;
+}
+
 .min-h-screen {
   min-height: calc(var(--vh, 1vh) * 100);
 }
@@ -73,11 +77,12 @@ body {
     color: #dc9e25;
   }
 
-  .active > * {
+  .active {
     color: #dc9e25;
+    background-color: transparent;
   }
 
-  .active {
+  .active > * {
     color: #dc9e25;
   }
 

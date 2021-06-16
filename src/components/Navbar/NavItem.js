@@ -43,9 +43,9 @@ const NavItem = ({ name, pathname, isOpen, setIsOpen }) => {
             initial="down"
             animate={dropdown ? "up" : "down"}
             variants={chevronVariants}
-            className='flex'
+            className="flex"
           >
-            <KeyboardArrowDownRoundedIcon className='my-auto' />
+            <KeyboardArrowDownRoundedIcon className="my-auto" />
           </motion.div>
         </div>
 
@@ -71,7 +71,7 @@ const NavItem = ({ name, pathname, isOpen, setIsOpen }) => {
                 to={`/kabinet/${department.id}`}
                 className="w-full text-white px-8 md:px-0 py-2"
               >
-                {department.id}
+                {department.id !== "wakilpresiden" ? department.id : "WAKIL PRESIDEN"}
               </NavLink>
             </dd>
           ))}

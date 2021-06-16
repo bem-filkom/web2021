@@ -35,8 +35,8 @@ const Department = ({ history }) => {
       <div className="max-w-5xl px-10 md:px-24 mx-auto pt-12">
         <div>
           <img
-            src="/assets/pictures/wide-rectangle.jpg"
-            alt="BPH"
+            src={`/assets/kabinet/bph/${id}.png`}
+            alt={department.id}
             className="mx-auto"
           />
         </div>

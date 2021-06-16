@@ -84,6 +84,7 @@ body {
 
   .active > * {
     color: #dc9e25;
+    background-color: transparent;
   }
 
   .active::after {

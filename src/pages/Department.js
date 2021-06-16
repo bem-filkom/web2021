@@ -48,7 +48,7 @@ const Department = ({ history }) => {
                 : department.core.length === 2
                 ? "grid-cols-2"
                 : "grid-cols-3"
-            } py-4 gap-x-4 gap-y-6 md:gap-y-4`}
+            } py-4 gap-x-4 gap-y-4`}
           >
             {department.core.map((person, idx) => (
               <Profile name={person.name} role={person.role} key={idx} />

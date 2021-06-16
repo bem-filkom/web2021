@@ -72,7 +72,7 @@ const About = () => {
         </div>
       </div>
       <div className="text-purple bg-gray">
-        <div className="max-w-8xl mx-auto px-10 py-12 px-10 py-12">
+        <div className="max-w-8xl mx-auto px-10 py-12">
           <h2 className="text-4xl font-marcellus border-b-2 border-purple pb-4">
             MISI
           </h2>

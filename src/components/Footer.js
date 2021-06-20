@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { WEBSITE_LINKS } from "../utils/constants";
 
 const Footer = () => {
   return (
@@ -39,26 +40,13 @@ const Footer = () => {
           <h3 className="text-yellow  mb-4 font-marcellus">Tautan Terkait</h3>
           <div>
             <dl className="text-white text-lg">
-              <dd>
-                <Link to="/">
-                  <i className="fas fa-arrow-right"></i> Mozaik Asa 2021
-                </Link>
-              </dd>
-              <dd>
-                <Link to="/">
-                  <i className="fas fa-arrow-right"></i> Elaborasi Makna 2020
-                </Link>
-              </dd>
-              <dd>
-                <Link to="/">
-                  <i className="fas fa-arrow-right"></i> Atmabara 2019
-                </Link>
-              </dd>
-              <dd>
-                <Link to="/">
-                  <i className="fas fa-arrow-right"></i> Adhitakarya 2018
-                </Link>
-              </dd>
+              {WEBSITE_LINKS.map((web,idx) => (
+                <dd key={idx}>
+                  <Link to={`${web.pathname}`}>
+                    <i className="fas fa-arrow-right"></i> {`${web.name}`}
+                  </Link>
+                </dd>
+              ))}
             </dl>
           </div>
         </div>

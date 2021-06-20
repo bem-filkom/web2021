@@ -53,32 +53,3 @@
    display: none;
   }
 }
-/* 
-@media screen and (max-width: 768px) {
-  .ribbon-wrapper::after,
-  .ribbon-wrapper::before {
-    border-width: 30px;
-    bottom: -2rem;
-  }
-
-  .ribbon-wrapper::before {
-    left: -2.6rem;
-  }
-
-  .ribbon-wrapper::after {
-    right: -2.6rem;
-  }
-
-  .ribbon::after,
-  .ribbon::before {
-    bottom: -2rem;
-  }
-
-  .ribbon::after {
-    border-width: 2rem 2rem 0rem 0rem;
-  }
-
-  .ribbon::before {
-    border-width: 2rem 0rem 0rem 2rem;
-  }
-} */

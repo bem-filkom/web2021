@@ -124,7 +124,7 @@ const Home = () => {
             <Slide right>
               <div className="text-white font-aeonik text-md flex-auto text-justify w-full md:w-5/12 flex flex-col justify-around space-y-4 md:space-y-2">
                 <p className="text-yellow font-semibold">
-                  Assalamu alaikum wr wb. Shalom. Om Swastyastu. Namo Buddhaya
+                  Assalamu'alaikum wr wb. Shalom. Om Swastyastu. Namo Buddhaya
                   Rahayu.
                 </p>
                 <p>

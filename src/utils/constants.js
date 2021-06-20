@@ -5,6 +5,13 @@ export const NAVBAR_ITEMS = [
   // { name: "Kalender", pathname: "/kalender" },
 ];
 
+export const WEBSITE_LINKS = [
+  { name: "Mozaik Asa 2021", pathname: "/" },
+  { name: "Elaborasi Makna 2020", pathname: "/2020" },
+  { name: "Atmabara 2019", pathname: "/2019" },
+  { name: "Adhitakarya 2018", pathname: "/2018" },
+];
+
 export const partnerships = [
   "dqlab",
   "sekolah-desain",

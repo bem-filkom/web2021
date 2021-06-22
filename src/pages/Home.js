@@ -115,7 +115,7 @@ const Home = () => {
             <div className="flex-none w-full md:w-4/12 flex items-center justify-center">
               <Fade>
                 <img
-                  src="/assets/kabinet/pres-wapres.jpg"
+                  src="/assets/kabinet/pres-wapres.png"
                   className="w-10/12 md:w-11/12"
                   alt="Presiden BEM"
                 />

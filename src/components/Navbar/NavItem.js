@@ -56,6 +56,22 @@ const NavItem = ({ name, pathname, isOpen, setIsOpen }) => {
           variants={dropdownVariants}
           className="relative md:absolute bg-purple w-full dropdown"
         >
+          <dd
+            className="uppercase cursor-pointer hover:bg-yellow flex h-auto text-left md:text-center font-aeonik text-orange-light text-sm"
+            onClick={() => {
+              setDropdown(false);
+              setIsOpen(!isOpen);
+            }}
+          >
+            <NavLink
+              exact
+              activeClassName="active-dropdown-item"
+              to={`/kabinet`}
+              className="w-full text-white px-8 md:px-0 py-2"
+            >
+              Struktur
+            </NavLink>
+          </dd>
           {departments.map((department) => (
             <dd
               key={department.id}
@@ -71,7 +87,9 @@ const NavItem = ({ name, pathname, isOpen, setIsOpen }) => {
                 to={`/kabinet/${department.id}`}
                 className="w-full text-white px-8 md:px-0 py-2"
               >
-                {department.id !== "wakilpresiden" ? department.id : "WAKIL PRESIDEN"}
+                {department.id !== "wakilpresiden"
+                  ? department.id
+                  : "WAKIL PRESIDEN"}
               </NavLink>
             </dd>
           ))}

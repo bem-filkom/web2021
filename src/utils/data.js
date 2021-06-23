@@ -28,7 +28,7 @@ export const departments = [
       { name: "Khadija Pohan", role: "Anggota PSDI" },
       { name: "Yesaya Vito", role: "Anggota PSDI" },
     ],
-    task: "Melakukan fungsi monitoring dan evaluasi terhadap kinerja dan personality sumber daya manusia BEM FILKOM UB. Selain itu PSDI juga bertugas sebagai inisiator dari peningkatan kapabilitas (upgrading) dan peningkatan solidaritas (bonding) seluruh sumber daya manusia BEM FILKOM UB berdasarkan hasil monitoring dan evaluasi.",
+    task: "Melakukan fungsi monitoring dan evaluasi terhadap kinerja dan kualitas sumber daya manusia BEM FILKOM UB. Selain itu PSDI juga bertugas sebagai inisiator dari peningkatan kapabilitas (upgrading) dan peningkatan solidaritas (bonding) seluruh sumber daya manusia BEM FILKOM UB berdasarkan hasil monitoring dan evaluasi.",
     programs: [
       "TRAINING ORGANIZATION",
       "UPGRADING",
@@ -63,7 +63,7 @@ export const departments = [
       "STAFF MUDA BEM FILKOM",
       "INAUGURASI FILKOM",
       "LKMM-TM",
-      "LEADERS OF TOMORROW",
+      "LEADER OF TOMORROW",
       "FILKOM Softskill Campaign",
     ],
     staff: [
@@ -99,7 +99,6 @@ export const departments = [
       "STUDI EKSKURSI",
       "STUDI BANDING",
       "FILKOM VIRTUAL OPEN DAY",
-      "AUDIT CITRA INTERNAL",
       "AUDIT CITRA EKSTERNAL (ACE)",
     ],
     staff: [
@@ -131,7 +130,6 @@ export const departments = [
       "House of Technology 4.0",
       "Career Academy",
       "Portal Career",
-      "Kanal Prestasi",
       "Mawapres FILKOM",
       "Financial Project",
       "Partnership",
@@ -159,7 +157,7 @@ export const departments = [
         name: "Reza Satya Mahesa",
         role: "Menteri Kastrat",
       },
-      { name: "Farid Syauqi", role: "Dirjen Internal" },
+      { name: "Farid Syauqi Nirwan", role: "Dirjen Internal" },
     ],
     task: "Bertanggungjawab dalam mengawal isu-isu strategis dengan melakukan pencerdasan, propaganda, dan pengkajian terhadap isu di ranah universitas, regional, nasional, maupun internasional.",
     programs: ["APANI", "Router", "KPK", "Wani Penat", "Bang Sambat"],
@@ -194,7 +192,7 @@ export const departments = [
       "#WETALK",
       "FILKOM Peduli",
       "Environment Corner (E-Co)",
-      "Envirocative",
+      "Envirocative ( Environment Activities )",
     ],
     staff: [
       { name: "Dian Ayu Rahmawati" },
@@ -212,7 +210,7 @@ export const departments = [
     title: "Advokasi dan Kesejahteraan Mahasiswa",
     type: "Kementerian",
     core: [
-      { name: "Nadya Nur Fadhila", role: "Dirjen Kebijakan Kampus" },
+      { name: "Nadya Nur Fadhila", role: "Dirjen Advokasi dan Kebijakan Kampus" },
       {
         name: "Chusna Farida Islama",
         role: "Menteri Advokesma",

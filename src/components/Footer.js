@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { WEBSITE_LINKS } from "../utils/constants";
+import { SOSMED_LINKS, WEBSITE_LINKS } from "../utils/constants";
 
 const Footer = () => {
   return (
@@ -18,21 +18,11 @@ const Footer = () => {
           <h3 className="text-yellow  mb-4 font-marcellus">Ikuti Kami</h3>
           <div className="flex">
             <div className="text-white flex flex-row flex-wrap gap-x-4 text-3xl md:text-4xl">
-              <div>
-                <i className="fab fa-instagram"></i>
-              </div>
-              <div>
-                <i className="fab fa-tiktok"></i>
-              </div>
-              <div>
-                <i className="fab fa-line"></i>
-              </div>
-              <div>
-                <i className="fab fa-youtube"></i>
-              </div>
-              <div>
-                <i className="fab fa-twitter"></i>
-              </div>
+              {SOSMED_LINKS.map((sosmed, idx) => (
+                <a href={sosmed.url} target="_blank" rel="noreferrer" key={idx}>
+                  <i className={`fab fa-${sosmed.name}`}></i>
+                </a>
+              ))}
             </div>
           </div>
         </div>
@@ -40,7 +30,7 @@ const Footer = () => {
           <h3 className="text-yellow  mb-4 font-marcellus">Tautan Terkait</h3>
           <div>
             <dl className="text-white text-lg">
-              {WEBSITE_LINKS.map((web,idx) => (
+              {WEBSITE_LINKS.map((web, idx) => (
                 <dd key={idx}>
                   <Link to={`${web.pathname}`}>
                     <i className="fas fa-arrow-right"></i> {`${web.name}`}

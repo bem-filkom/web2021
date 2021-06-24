@@ -54,9 +54,22 @@ body {
   background-color: #dc9e25;
 }
 
+.h-screen {
+  height: calc(var(--vh, 1vh) * 100 - 78px);
+}
+
 .min-h-screen {
   min-height: calc(var(--vh, 1vh) * 100);
 }
+
+.slick-track {
+  display: flex;
+}
+
+.slick-slide {
+  margin: auto;
+}
+
 
 @media screen and (max-width: 1024px) {
   html {
@@ -84,12 +97,9 @@ body {
   .active::after {
     display: none;
   }
+
+  .h-screen {
+    min-height: calc(var(--vh, 1vh) * 100 - 64px);
+  }
 }
 
-.slick-track {
-  display: flex;
-}
-
-.slick-slide {
-  margin: auto;
-}

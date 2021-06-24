@@ -74,9 +74,9 @@ const Home = () => {
       >
         <Fade bottom>
           <div
-            className="flex flex-col gap-4 md:gap-2 font-marcellus"
+            className="flex flex-col gap-4 md:gap-2 font-marcellus py-56"
             style={{
-              textShadow: " 1px 1px 8px rgb(36 37 47 / 25%)",
+              textShadow: "1px 1px 8px rgb(36 37 47 / 25%)",
             }}
           >
             <h1 className="text-5xl md:text-7xl text-center">

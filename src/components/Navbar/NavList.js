@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { NAVBAR_ITEMS } from "../../utils/constants";
 import NavItem from "./NavItem";
 import { motion, useAnimation } from "framer-motion";
@@ -6,15 +6,17 @@ import { motion, useAnimation } from "framer-motion";
 const NavList = ({ isOpen, setIsOpen }) => {
   const controls = useAnimation();
 
-  if (isOpen) {
-    controls.start({
-      left: 0,
-    });
-  } else {
-    controls.start({
-      left: "-100%",
-    });
-  }
+  useEffect(() => {
+    if (isOpen) {
+      controls.start({
+        left: 0,
+      });
+    } else {
+      controls.start({
+        left: "-100%",
+      });
+    }
+  }, [controls, isOpen]);
 
   return (
     <>

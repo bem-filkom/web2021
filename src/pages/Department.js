@@ -37,7 +37,7 @@ const Department = ({ history }) => {
           <img
             src={`/assets/kabinet/bph/${id}.png`}
             alt={department.id}
-            className="mx-auto shadow-lg"
+            className="mx-auto shadow-lg rounded-md"
           />
         </div>
         {department.core && (

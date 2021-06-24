@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 const Navlogo = ({ isOpen, setIsOpen }) => {
   return (
     <div className="w-full px-4 md:px-0 md:w-auto flex flex-none flex-row justify-between md:justify-start relative">
-      <Link to="/">
+      <Link to="/" onClick={() => setIsOpen(false)}>
         <img
           src="/assets/pictures/logo-bem-without-text.png"
           style={{
@@ -32,7 +32,7 @@ const Navlogo = ({ isOpen, setIsOpen }) => {
           className="bg-white h-1 w-8 relative rounded-md"
         ></motion.span>
         <motion.span
-          animate={isOpen ? { rotate: -45, top: -0.2 } : { rotate: 0, top: 12 }}
+          animate={isOpen ? { rotate: -45, top: -0.6 } : { rotate: 0, top: 12 }}
           className="bg-white h-1 w-8 relative rounded-md"
         ></motion.span>
       </div>

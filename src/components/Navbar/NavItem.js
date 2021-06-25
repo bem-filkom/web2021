@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { departments } from "../../utils/data";
-import KeyboardArrowDownRoundedIcon from "@material-ui/icons/KeyboardArrowDownRounded";
 import { motion } from "framer-motion";
 
 const NavItem = ({ name, pathname, isOpen, setIsOpen }) => {
@@ -43,9 +42,21 @@ const NavItem = ({ name, pathname, isOpen, setIsOpen }) => {
             initial="down"
             animate={dropdown ? "up" : "down"}
             variants={chevronVariants}
-            className="flex"
           >
-            <KeyboardArrowDownRoundedIcon className="my-auto" />
+            <motion.svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-4 w-4"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M19 9l-7 7-7-7"
+              />
+            </motion.svg>
           </motion.div>
         </div>
 

@@ -11,7 +11,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const variants = {
-    hidden: { backgroundColor: "rgba(71, 30, 60, 0)" },
+    hidden: { backgroundColor: "rgba(71, 30, 60, 0)", boxShadow: "none" },
     visible: { backgroundColor: "#471F3C", transition: { duration: 0.5 } },
   };
 
@@ -37,7 +37,7 @@ const Navbar = () => {
         variants={variants}
         className={`flex-row px-4 ${
           home ? "fixed" : "sticky bg-purple"
-        } w-full top-0 font-aeonik text-white z-20 hidden md:flex`}
+        } w-full top-0 font-aeonik shadow-2xl text-white z-20 hidden md:flex`}
       >
         <NavLogo isOpen={isOpen} setIsOpen={setIsOpen} />
         <NavList isOpen={isOpen} setIsOpen={setIsOpen} />

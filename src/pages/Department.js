@@ -37,12 +37,15 @@ const Department = ({ history }) => {
           <img
             src={`/assets/kabinet/bph/${id}.png`}
             alt={department.id}
-            className="mx-auto shadow-lg rounded-md"
+            className="mx-auto bg-white p-4"
+            style={{
+              boxShadow: "0 0 30px 10px rgba(0, 0, 0, 0.5)"
+            }}
           />
         </div>
         {department.core && (
           <div
-            className={`flex flex-wrap justify-around md:grid ${
+            className={`flex flex-wrap justify-around mt-5 md:grid ${
               department.core.length === 1
                 ? "md:grid-cols-1"
                 : department.core.length === 2

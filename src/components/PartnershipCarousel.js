@@ -38,6 +38,9 @@ const PartnershipCarousel = () => {
               src={`/assets/partnership/${partnership}.png`}
               alt="partnership"
               className="m-auto py-8 w-56"
+              style={{
+                filter: "drop-shadow(0px 0px 10px rgba(0,0,0,0.3)",
+              }}
             />
           </div>
         ))}

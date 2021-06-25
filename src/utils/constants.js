@@ -15,7 +15,7 @@ export const WEBSITE_LINKS = [
 export const SOSMED_LINKS = [
   { name: "instagram", url: "https://www.instagram.com/bemfilkomub/" },
   { name: "tiktok", url: "https://www.tiktok.com/@bemfilkomub" },
-  { name: "line", url: "line://ti/p/@bemfilkomub" },
+  { name: "line", url: "line://ti/p/@csj9184g" },
   { name: "youtube", url: "https://www.youtube.com/channel/UCLAmrHwP0hvOjPGHacMThZQ" },
   { name: "twitter", url: "https://twitter.com/BEMFILKOMUB" },
 ];

@@ -117,6 +117,9 @@ const Home = () => {
                 <img
                   src="/assets/kabinet/pres-wapres.png"
                   className="w-10/12 md:w-11/12"
+                  style={{
+                    filter: "drop-shadow(0px 0px 10px rgba(255,255,255,0.3)",
+                  }}
                   alt="Presiden BEM"
                 />
               </Fade>
@@ -186,8 +189,8 @@ const Home = () => {
           title="gmaps"
           style={{ border: 0 }}
           loading="lazy"
-          className="mx-auto px-6 md:px-0 w-full md:w-8/12 h-96"
-        ></iframe>
+          className="mx-auto px-6 md:px-0 w-full md:w-8/12 h-96 shadow-2xl"
+        />
       </div>
     </motion.div>
   );

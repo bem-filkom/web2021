@@ -66,7 +66,7 @@ const About = () => {
             VISI
           </h2>
           <p className="text-2xl py-8 font-aeonik">
-            BEM FILKOM UB Sebagai wadah multi arti sehingga terwujudnya
+            BEM FILKOM UB sebagai wadah multi arti sehingga terwujudnya
             kolaborasi aksi untuk FILKOM, Brawijaya, dan Indonesia
           </p>
         </div>

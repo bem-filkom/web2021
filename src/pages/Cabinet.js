@@ -13,7 +13,7 @@ const Cabinet = () => {
     >
       <Ribbon
         primaryTitle="STRUKTUR KABINET"
-        secondaryTitle="BADAN EKSEKUTIF MAHASISWA 2021"
+        secondaryTitle="BEM FILKOM UB 2021"
       />
       <div className="max-w-4xl mx-auto mb-20 px-12">
         <img src="/assets/kabinet/struktur.jpg" alt="struktur" />

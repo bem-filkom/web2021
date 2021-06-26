@@ -1,12 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React, {useEffect, useState} from "react";
 import ArticleCard from "../components/ArticleCard";
-import { motion } from "framer-motion";
+import {motion} from "framer-motion";
 import Underline from "../components/Underline";
-import { HashLink } from "react-router-hash-link";
+import {HashLink} from "react-router-hash-link";
 import PartnershipCarousel from "../components/PartnershipCarousel";
-import { Fade, Slide } from "react-reveal";
+import {Fade, Slide} from "react-reveal";
 import HashLoader from "react-spinners/HashLoader";
-import { css } from "@emotion/react";
+import {css} from "@emotion/react";
 
 const Home = () => {
   const [posts, setPosts] = useState([]);
@@ -17,7 +17,7 @@ const Home = () => {
     bottom: 8rem;
     transform: translate(-50%, -50%);
   `;
-
+  
   const variants = {
     up: {
       y: 0,
@@ -31,13 +31,13 @@ const Home = () => {
       },
     },
   };
-
+  
   useEffect(() => {
     const fetchIGPosts = async () => {
       try {
         setLoading(true);
         const res = await fetch("https://bemfilkom-rest.vercel.app/web/ig");
-        let { data } = await res.json();
+        let {data} = await res.json();
         setLoading(false);
         data = data.posts.map((item) => ({
           ...item,
@@ -53,24 +53,18 @@ const Home = () => {
     };
     fetchIGPosts();
   }, []);
-
+  
   return (
     <motion.div
       id="landing-page"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      transition={{ duration: 0.3 }}
+      initial={{opacity: 0}}
+      animate={{opacity: 1}}
+      exit={{opacity: 0}}
+      transition={{duration: 0.3}}
     >
       <div
         className="min-h-screen flex justify-center items-center text-white relative"
-        style={{
-          backgroundImage:
-            "linear-gradient(to right, rgba(184, 137, 47, 0.85), rgba(184, 137, 47, 0.65)), url('/assets/backgrounds/filkom.jpg')",
-          backgroundRepeat: "no-repeat",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
+        id="landingTop"
       >
         <Fade bottom>
           <div
@@ -82,9 +76,9 @@ const Home = () => {
             <h1 className="text-5xl md:text-7xl text-center">
               BEM FILKOM 2021
             </h1>
-            <h3 className="text-3xl md:text-3xl text-center">
+            <h2 className="text-3xl md:text-3xl text-center">
               — Kabinet Mozaik Asa —
-            </h3>
+            </h2>
           </div>
         </Fade>
         <div className=" text-2xl absolute bottom-20 left-1/2 transform -translate-x-1/2">
@@ -118,17 +112,17 @@ const Home = () => {
                   src="/assets/kabinet/pres-wapres.png"
                   className="w-10/12 md:w-11/12"
                   style={{
-                    filter: "drop-shadow(0px 0px 10px rgba(255,255,255,0.3)",
+                    filter: "drop-shadow(0px 0px 10px rgba(229,179,80,0.4)",
                   }}
                   alt="Presiden BEM"
                 />
               </Fade>
             </div>
             <Slide right>
-              <div className="text-white font-aeonik text-md flex-auto text-justify w-full md:w-5/12 flex flex-col justify-around space-y-4 md:space-y-2">
+              <div
+                className="text-white font-aeonik text-md flex-auto text-justify w-full md:w-5/12 flex flex-col justify-around space-y-4 md:space-y-2">
                 <p className="text-yellow font-semibold">
-                  Assalamu'alaikum wr wb. Shalom. Om Swastyastu. Namo Buddhaya
-                  Rahayu.
+                  Assalamualaikum warahmatullahi wabarakatuh. Shalom. Om Swastyastu. Namo Buddhaya Rahayu.
                 </p>
                 <p>
                   Salam hangat dari kita yang terpisah jarak kebersamaan. Di era
@@ -149,22 +143,22 @@ const Home = () => {
       </div>
       <div className="px-10 py-16 max-w-8xl mx-auto">
         <h2 className="text-purple text-center font-marcellus text-4xl font-bold">
-          KABAR TERBARU
+          Kabar Terbaru
         </h2>
-        <Underline />
+        <Underline/>
         <div className="flex flex-row flex-wrap mt-4 ">
           {loading ? (
             <div className="relative h-80 w-full">
-              <HashLoader color="#471F3C" loading={loading} css={override} />
+              <HashLoader color="#471F3C" loading={loading} css={override}/>
               <div className="text-xl text-purple text-center mb-2 absolute bottom-20 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                Loading...
+                Sedang mengambil berita...
               </div>
             </div>
           ) : (
             posts.map((post, idx) => <ArticleCard key={idx} {...post} />)
           )}
         </div>
-
+        
         <div className="flex mt-8">
           <a
             href="https://www.instagram.com/bemfilkomub/"
@@ -177,19 +171,23 @@ const Home = () => {
       </div>
       <div className="bg-yellow py-12">
         <h2 className="text-white text-center font-marcellus text-4xl font-semibold">
-          PARTNERSHIP
+          Partner
         </h2>
         <div className="mt-8">
-          <PartnershipCarousel />
+          <PartnershipCarousel/>
         </div>
       </div>
       <div className="py-16 bg-pink-light">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3951.4264334819277!2d112.61231751459947!3d-7.954807294270353!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7882798282a3fd%3A0x1bca73cef46dbaa3!2sBEM%20FILKOM%20UB!5e0!3m2!1sen!2sid!4v1620894336692!5m2!1sen!2sid"
           title="gmaps"
-          style={{ border: 0 }}
+          style={{border: 0}}
           loading="lazy"
-          className="mx-auto px-6 md:px-0 w-full md:w-8/12 h-96 shadow-2xl"
+          frameBorder="0"
+          allowFullScreen=""
+          aria-hidden="false"
+          tabIndex="0"
+          className="mx-auto rounded-lg px-6 md:px-0 w-full md:w-5/6 h-96 shadow-2xl"
         />
       </div>
     </motion.div>

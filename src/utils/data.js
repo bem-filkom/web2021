@@ -7,7 +7,7 @@ export const departments = [
     task: "Pengambil kebijakan tertinggi serta bertanggung jawab akan segala kegiatan dan aktivitas BEM FILKOM UB yang menjalankan fungsi kepemimpinan secara umum.",
   },
   {
-    id: "wakilpresiden",
+    id: "wapres",
     title: "Wakil Presiden",
     type: "Pengurus Inti",
     core: [{name: "Tiara Sri Mulati", role: "Wakil Presiden"}],

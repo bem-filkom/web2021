@@ -36,8 +36,8 @@ const NavItem = ({ name, pathname, isOpen, setIsOpen }) => {
           setDropdown(!dropdown);
         }}
       >
-        <div className="px-8 md:px-6 py-6 text-white text-xl relative flex items-center ">
-          {name}&nbsp;
+        <div className="px-8 md:px-6 py-6 text-white text-xl relative flex items-center">
+          <span className="transition transform hover:scale-105">{name}&nbsp;</span>
           <motion.div
             initial="down"
             animate={dropdown ? "up" : "down"}
@@ -98,9 +98,7 @@ const NavItem = ({ name, pathname, isOpen, setIsOpen }) => {
                 to={`/kabinet/${department.id}`}
                 className="w-full text-white px-8 md:px-0 py-2"
               >
-                {department.id !== "wakilpresiden"
-                  ? department.id
-                  : "WAKIL PRESIDEN"}
+                {department.id}
               </NavLink>
             </dd>
           ))}
@@ -118,7 +116,7 @@ const NavItem = ({ name, pathname, isOpen, setIsOpen }) => {
         onClick={() => {
           setIsOpen(!isOpen);
         }}
-        className="px-8 md:px-6 py-6 text-left text-white text-xl relative"
+        className="px-8 md:px-6 py-6 text-left text-white text-xl relative transition transform hover:scale-105"
       >
         {name}
       </NavLink>

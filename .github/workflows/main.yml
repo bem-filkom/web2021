@@ -30,6 +30,7 @@ jobs:
           ftp_username: ${{ secrets.FTP_USERNAME }}
           ftp_password: ${{ secrets.FTP_PASSWORD }}
           local_source_dir: "build"
+          only_newer: true
           dist_target_dir: "/"
           # WARNING: OPTION BELOW DELETES/REPLACES ALL REMOTE FILES THAT'S NOT IN BUILD! DONT USE TRUE FOR MAIN WEB DEPLOY!
           delete: "false"

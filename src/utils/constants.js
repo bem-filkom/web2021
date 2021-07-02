@@ -19,4 +19,5 @@ export const partnerships = [
   "sanbercode",
   "taf-english",
   "teknologi-id",
+  "progate"
 ];

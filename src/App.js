@@ -11,6 +11,7 @@ import Cabinet from "./pages/Cabinet";
 import Home from "./pages/Home";
 import Department from "./pages/Department";
 import NotFound from "./pages/NotFound";
+import ComPro from "./pages/ComPro";
 
 ReactGA.initialize("UA-38735593-4", {debug: false});
 
@@ -23,6 +24,7 @@ const App = () => {
       <AnimatePresence exitBeforeEnter>
         <Switch location={location} key={location.pathname}>
           <Route path="/tentang" component={About} exact />
+          <Route path="/compro" component={ComPro} exact />
           <Route path="/kabinet" component={Cabinet} exact />
           <Route path="/kabinet/:id" component={Department} exact />
           {/* <Route path="/kalender" component={Calendar} exact /> */}

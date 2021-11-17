@@ -193,7 +193,7 @@ const Home = () => {
             allowFullScreen="allowfullscreen"
             scrolling="no"
             className="fp-iframe mx-auto"
-            src="https://heyzine.com/flip-book/44d8655310.html"
+            src="https://heyzine.com/flip-book/02947d0e4a.html"
           ></iframe>
         </div>
       </div>

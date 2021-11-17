@@ -91,16 +91,9 @@ body {
 }
 
 #compro {
-  width: 1200px;
-  height: 800px;
+  width: 840px;
+  height: 560px;
   padding-bottom: 4rem;
-}
-
-@media screen and (max-width: 1200px) {
-  #compro {
-    width: 900px;
-    height: 600px;
-  }
 }
 
 @media screen and (max-width: 1024px) {

@@ -2,7 +2,6 @@ import React from "react";
 import { Switch, Route, useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 import ReactGA from "react-ga";
-
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar/Navbar";
 import ScrollToTop from "./components/ScrollToTop";
@@ -11,7 +10,6 @@ import Cabinet from "./pages/Cabinet";
 import Home from "./pages/Home";
 import Department from "./pages/Department";
 import NotFound from "./pages/NotFound";
-import ComPro from "./pages/ComPro";
 
 ReactGA.initialize("UA-38735593-4", {debug: false});
 
@@ -24,10 +22,8 @@ const App = () => {
       <AnimatePresence exitBeforeEnter>
         <Switch location={location} key={location.pathname}>
           <Route path="/tentang" component={About} exact />
-          <Route path="/compro" component={ComPro} exact />
           <Route path="/kabinet" component={Cabinet} exact />
           <Route path="/kabinet/:id" component={Department} exact />
-          {/* <Route path="/kalender" component={Calendar} exact /> */}
           <Route path="/" component={Home} exact />
           <Route path="*" component={NotFound} />
         </Switch>

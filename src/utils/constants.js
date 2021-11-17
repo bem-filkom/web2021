@@ -1,7 +1,6 @@
 export const NAVBAR_ITEMS = [
   { name: "Beranda", pathname: "/" },
   { name: "Tentang", pathname: "/tentang" },
-  { name: "Compro", pathname: "/compro" },
   { name: "Kabinet", pathname: "/kabinet" },
 ];
 

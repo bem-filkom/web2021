@@ -141,7 +141,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className="px-10 py-16 max-w-8xl mx-auto">
+      <div className="px-10 py-12 max-w-8xl mx-auto">
         <h2 className="text-purple text-center font-marcellus text-4xl font-bold">
           Kabar Terbaru
         </h2>
@@ -177,18 +177,25 @@ const Home = () => {
           <PartnershipCarousel />
         </div>
       </div>
-      <div className="py-16 bg-pink-light">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3951.4264334819277!2d112.61231751459947!3d-7.954807294270353!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7882798282a3fd%3A0x1bca73cef46dbaa3!2sBEM%20FILKOM%20UB!5e0!3m2!1sen!2sid!4v1620894336692!5m2!1sen!2sid"
-          title="gmaps"
-          style={{ border: 0 }}
-          loading="lazy"
-          frameBorder="0"
-          allowFullScreen=""
-          aria-hidden="false"
-          tabIndex="0"
-          className="mx-auto rounded-lg px-6 md:px-0 w-full md:w-5/6 h-96 shadow-2xl"
-        />
+      <div className="py-12 bg-pink-light">
+        <div className="text-center text-purple font-marcellus">
+          <Fade bottom>
+            <div className="pb-12">
+              <h1 className="text-4xl relative font-semibold">Company Profile</h1>
+              <Underline />
+            </div>
+          </Fade>
+          <iframe
+            id="compro"
+            title="compro"
+            src="https://www.flipbookpdf.net/web/site/88660d32b2ac4bd7586c8faac95a3b49b3460894202111.pdf.html"
+            frameborder="0"
+            webkitAllowFullScreen
+            mozallowfullscreen
+            allowFullScreen
+            className="mx-auto"
+          ></iframe>
+        </div>
       </div>
     </motion.div>
   );

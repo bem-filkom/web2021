@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Marcellus&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Marcellus&display=swap");
 
 @import "../../node_modules/slick-carousel/slick/slick.css";
 @import "../../node_modules/slick-carousel/slick/slick-theme.css";
@@ -26,7 +26,12 @@ body {
 }
 
 #landingTop {
-  background-image: linear-gradient(to right, rgba(184, 137, 47, 0.90), rgba(184, 137, 47, 0.60)), url('../assets/backgrounds/filkom.jpg');
+  background-image: linear-gradient(
+      to right,
+      rgba(184, 137, 47, 0.9),
+      rgba(184, 137, 47, 0.6)
+    ),
+    url("../assets/backgrounds/filkom.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 150% 150%;
@@ -85,6 +90,11 @@ body {
   margin: auto;
 }
 
+#compro {
+  width: 840px;
+  height: 560px;
+  padding-bottom: 4rem;
+}
 
 @media screen and (max-width: 1024px) {
   html {
@@ -92,6 +102,13 @@ body {
   }
   #landingTop {
     background-size: cover;
+  }
+}
+
+@media (max-width: 900px) {
+  #compro {
+    width: 600px;
+    height: 400px;
   }
 }
 
@@ -121,3 +138,23 @@ body {
   }
 }
 
+@media (max-width: 600px) {
+  #compro {
+    width: 400px;
+    height: 266px;
+  }
+}
+
+@media (max-width: 600px) {
+  #compro {
+    width: 400px;
+    height: 266px;
+  }
+}
+
+@media (max-width: 400px) {
+  #compro {
+    width: 300px;
+    height: 200px;
+  }
+}

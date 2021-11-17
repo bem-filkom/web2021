@@ -181,19 +181,19 @@ const Home = () => {
         <div className="text-center text-purple font-marcellus">
           <Fade bottom>
             <div className="pb-12">
-              <h1 className="text-4xl relative font-semibold">Company Profile</h1>
+              <h1 className="text-4xl relative font-semibold">
+                Company Profile
+              </h1>
               <Underline />
             </div>
           </Fade>
           <iframe
             id="compro"
             title="compro"
-            src="https://www.flipbookpdf.net/web/site/88660d32b2ac4bd7586c8faac95a3b49b3460894202111.pdf.html"
-            frameborder="0"
-            webkitAllowFullScreen
-            mozallowfullscreen
-            allowFullScreen
-            className="mx-auto"
+            allowFullScreen="allowfullscreen"
+            scrolling="no"
+            className="fp-iframe mx-auto"
+            src="https://heyzine.com/flip-book/44d8655310.html"
           ></iframe>
         </div>
       </div>

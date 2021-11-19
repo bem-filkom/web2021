@@ -1,5 +1,5 @@
 import React from "react";
-import { Switch, Route, useLocation } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 import ReactGA from "react-ga";
 import Footer from "./components/Footer";
@@ -20,13 +20,13 @@ const App = () => {
       <Navbar />
       <ScrollToTop />
       <AnimatePresence exitBeforeEnter>
-        <Switch location={location} key={location.pathname}>
-          <Route path="/tentang" component={About} exact />
-          <Route path="/kabinet" component={Cabinet} exact />
-          <Route path="/kabinet/:id" component={Department} exact />
-          <Route path="/" component={Home} exact />
-          <Route path="*" component={NotFound} />
-        </Switch>
+        <Routes location={location} key={location.pathname}>
+          <Route path="/tentang" element={<About/>} />
+          <Route path="/kabinet" element={<Cabinet/>} />
+          <Route path="/kabinet/:id" element={<Department/>} exact />
+          <Route path="/" element={<Home/>} exact />
+          <Route path="*" element={<NotFound/>} />
+        </Routes>
       </AnimatePresence>
       <Footer />
     </>

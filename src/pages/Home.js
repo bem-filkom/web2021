@@ -194,7 +194,7 @@ const Home = () => {
             scrolling="no"
             className="fp-iframe mx-auto"
             src="https://heyzine.com/flip-book/02947d0e4a.html"
-          ></iframe>
+          />
         </div>
       </div>
     </motion.div>

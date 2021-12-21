@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import { departments } from "../../utils/data";
 import { motion } from "framer-motion";
 
@@ -37,7 +37,9 @@ const NavItem = ({ name, pathname, isOpen, setIsOpen }) => {
         }}
       >
         <div className="px-8 md:px-6 py-6 text-white text-xl relative flex items-center">
-          <span className="transition transform hover:scale-105">{name}&nbsp;</span>
+          <span className="transition transform hover:scale-105">
+            {name}&nbsp;
+          </span>
           <motion.div
             initial="down"
             animate={dropdown ? "up" : "down"}
@@ -74,14 +76,14 @@ const NavItem = ({ name, pathname, isOpen, setIsOpen }) => {
               setIsOpen(!isOpen);
             }}
           >
-            <NavLink
+            <Link
               exact
               activeClassName="active-dropdown-item"
               to={`/kabinet`}
               className="w-full text-white px-8 md:px-0 py-2"
             >
               Struktur
-            </NavLink>
+            </Link>
           </dd>
           {departments.map((department) => (
             <dd
@@ -92,14 +94,14 @@ const NavItem = ({ name, pathname, isOpen, setIsOpen }) => {
                 setIsOpen(!isOpen);
               }}
             >
-              <NavLink
+              <Link
                 exact
                 activeClassName="active-dropdown-item"
                 to={`/kabinet/${department.id}`}
                 className="w-full text-white px-8 md:px-0 py-2"
               >
                 {department.id}
-              </NavLink>
+              </Link>
             </dd>
           ))}
         </motion.dl>
@@ -107,20 +109,31 @@ const NavItem = ({ name, pathname, isOpen, setIsOpen }) => {
     );
   }
 
-  return (
-    <>
-      <NavLink
-        exact
-        activeClassName="active"
-        to={pathname}
-        onClick={() => {
-          setIsOpen(!isOpen);
-        }}
+  if (pathname.startsWith("http")) {
+    return (
+      <a
+        href={pathname}
+        target="_blank"
+        rel="noreferrer"
         className="px-8 md:px-6 py-6 text-left text-white text-xl relative transition transform hover:scale-105"
       >
         {name}
-      </NavLink>
-    </>
+      </a>
+    );
+  }
+
+  return (
+    <NavLink
+      exact
+      activeClassName="active"
+      to={pathname}
+      onClick={() => {
+        setIsOpen(!isOpen);
+      }}
+      className="px-8 md:px-6 py-6 text-left text-white text-xl relative transition transform hover:scale-105"
+    >
+      {name}
+    </NavLink>
   );
 };
 

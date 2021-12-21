@@ -2,7 +2,7 @@ export const NAVBAR_ITEMS = [
   { name: "Beranda", pathname: "/" },
   { name: "Tentang", pathname: "/tentang" },
   { name: "Kabinet", pathname: "/kabinet" },
-  {name: "SIPERAT" , pathname : "https://bemfilkom.ub.ac.id/apps/siperat/#/dashboard"}
+  { name: "SIPERAT" , pathname : "https://bemfilkom.ub.ac.id/apps/siperat" }
 ];
 
 export const WEBSITE_LINKS = [
